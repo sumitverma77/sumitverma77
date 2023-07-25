@@ -1,4 +1,4 @@
-<h1 align="center">Hi , I'm Sumit Verma</h1>
+<h1  >Hi , I'm Sumit Verma</h1>
 <h3 align="center">A passionate Software Engineer from India</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=sumitverma77&label=Profile%20views&color=0e75b6&style=flat" alt="sumitverma77" /> </p>
@@ -41,6 +41,6 @@
   </a>
 </p>
 -->
-<p align="center">
+<p >
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=sumitverma77" alt="sumitverma77" />
 </p>
