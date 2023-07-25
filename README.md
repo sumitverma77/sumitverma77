@@ -1,13 +1,14 @@
-<h1  >Hi , I'm Sumit Verma</h1>
-<h3 >A passionate Software Engineer from India</h3>
+<h1 align="center">Hi, I'm <span style="color: green;">Sumit Verma</span></h1>
+<h3>A passionate Software Engineer from India</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=sumitverma77&label=Profile%20views&color=0e75b6&style=flat" alt="sumitverma77" /> </p>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=sumitverma77&label=Profile%20views&color=0e75b6&style=flat" alt="sumitverma77" /> </p>
 
 - 🌱 I’m currently learning **Web Development**
 
 - 💬 Ask me about **C, C++, Data Structure & Algorithms, HTML, CSS**
 
-<!--<h3 align="left">Connect with me:</h3>
+<!--
+<h3 align="left">Connect with me:</h3>
 <p align="left">
   <a href="https://linkedin.com/in/sumit-verma-" target="_blank" rel="noreferrer">
     <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="sumit-verma-" height="30" width="30" />
@@ -41,6 +42,6 @@
   </a>
 </p>
 -->
-<p >
+<p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=sumitverma77" alt="sumitverma77" />
 </p>
