@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=sumitverma77&label=Profile%20views&color=0e75b6&style=flat" alt="sumitverma77" /> </p>
 
-- 🌱 I’m currently learning **Web Development**
+- 🌱 I’m currently learning **Backend Development**
 
 - 💬 Ask me about **C, C++, Data Structure & Algorithms, HTML, CSS**
 
