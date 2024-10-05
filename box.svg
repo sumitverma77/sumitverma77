@@ -36,8 +36,8 @@
     </text>
     
     <text x="370" y="30" fill="#c9d1d9">
-        <tspan x="370" y="30">Sumit Verma</tspan>
-        <tspan x="370" y="50" >———————————</tspan>
+        <tspan x="370" y="30" class="">Sumit Verma</tspan> | <tspan class="">Backend Developer</tspan>
+        <tspan x="370" y="50" >———————————————————————————————</tspan>
         <tspan x="370" y="70" class="keyColor">Programming Languages</tspan>: <tspan class="valueColor">C, C++, Java</tspan>
         <tspan x="370" y="90" class="keyColor">Frameworks</tspan>: <tspan class="valueColor">Spring Boot</tspan>
         <tspan x="370" y="110" class="keyColor">Core Competencies</tspan>: <tspan class="valueColor">DSA, OOPs, System Design, DBMS</tspan>
