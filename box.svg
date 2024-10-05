@@ -43,7 +43,7 @@
         <tspan x="370" y="110" class="keyColor">Core Competencies</tspan>: <tspan class="valueColor">DSA, OOPs, System Design, DBMS</tspan>
         <tspan x="370" y="130" class="keyColor">Database Technologies</tspan>: <tspan class="valueColor">MySQL, PostgreSQL, DynamoDB, Redis</tspan> <tspan class="commentColor"> #CPET</tspan>
         <tspan x="370" y="150" class="keyColor">Cloud Services</tspan>: <tspan class="valueColor">AWS (Elastic Beanstalk, EC2, S3, RDS, ElastiCache)</tspan>
-        <tspan x="370" y="190" class="keyColor">Messaging & Streaming</tspan>: <tspan class="valueColor">Kafka</tspan>
+        <tspan x="370" y="190" class="keyColor">Messaging and Streaming</tspan>: <tspan class="valueColor">Kafka</tspan>
         <tspan x="370" y="210" class="keyColor">Development Tools</tspan>: <tspan class="valueColor">IntelliJ IDEA, DataGrip, Postman, Swagger, VS Code</tspan>
         <tspan x="370" y="230" class="keyColor">Version Control</tspan>: <tspan class="valueColor">Git, GitHub</tspan>
         <tspan x="370" y="270" class="keyColor">Database Migration Tool</tspan>: <tspan class="valueColor">Flyway</tspan>
