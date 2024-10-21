@@ -10,7 +10,8 @@
     </style>
     
     <rect width="970px" height="450px" fill="#161b22" rx="15"/>
-    <text x="15" y="30" fill="#c9d1d9" class="ascii">
+    <rect width="970px" height="450px" fill="none" stroke="#ffffff" stroke-width="10" rx="15"/> <!-- Border rectangle -->
+    <!-- <text x="15" y="30" fill="#c9d1d9" class="ascii">
         <tspan x="15" y="30">           ================++            </tspan>
         <tspan x="15" y="50">         ==================++=           </tspan>
         <tspan x="15" y="70">         ===============+++++=           </tspan>
@@ -31,30 +32,30 @@
         <tspan x="15" y="370">  ======***=====+****++======****==*+***</tspan>
         <tspan x="15" y="390"> ======+***+=======+=======*++***+=*+*+*</tspan>
         <tspan x="15" y="410"> ======+****+=++===++=*+==*+=+****=+*+**</tspan>
-        <tspan x="15" y="430">=======+*****=++====*+**+++=+*****++**+=</tspan>
+        <tspan x="15" y="430">=======+*****=++====*+**+++=+*****++**+=</tspan> -->
 <!--         <tspan x="15" y="450">==========+***++====****+==++**++****==*</tspan>   -->
-    </text>
+    <!-- </text> -->
     
-    <text x="370" y="30" fill="#c9d1d9">
-        <tspan x="370" y="30" class="">Sumit Verma</tspan> | <tspan class="">Backend Developer</tspan>
-        <tspan x="370" y="50" >———————————————————————————————</tspan>
-        <tspan x="370" y="70" class="keyColor">Programming Languages</tspan>: <tspan class="valueColor">C, C++, Java</tspan>
-        <tspan x="370" y="90" class="keyColor">Frameworks</tspan>: <tspan class="valueColor">Spring Boot</tspan>
-        <tspan x="370" y="110" class="keyColor">Core Competencies</tspan>: <tspan class="valueColor">DSA, OOPs, System Design, DBMS</tspan>
-        <tspan x="370" y="130" class="keyColor">Database Technologies</tspan>: <tspan class="valueColor">MySQL, PostgreSQL, DynamoDB, Redis</tspan> <tspan class="commentColor"></tspan>
-        <tspan x="370" y="150" class="keyColor">Cloud Services</tspan>: <tspan class="valueColor">AWS(Elastic Beanstalk, EC2, S3, RDS, ElastiCache)</tspan>
-        <tspan x="370" y="190" class="keyColor">Messaging and Streaming</tspan>: <tspan class="valueColor">Kafka</tspan>
-        <tspan x="370" y="210" class="keyColor">Testing</tspan>: <tspan class="valueColor">Junit, Mockito</tspan>
-        <tspan x="370" y="230" class="keyColor">Version Control</tspan>: <tspan class="valueColor">Git, GitHub</tspan>
-        <tspan x="370" y="250" class="keyColor">Database Migration Tool</tspan>: <tspan class="valueColor">Flyway</tspan>
+    <text x="15" y="30" fill="#c9d1d9" >
+        <tspan x="350" y="30" class="">Sumit Verma</tspan> | <tspan class="">Backend Developer</tspan>
+        <tspan x="15" y="50" class="">————————————————————————————————————————————————————————————————————————————————————————————————————————————</tspan>
+        <tspan x="15" y="70" class="keyColor">Programming Languages</tspan>: <tspan class="valueColor">C, C++, Java</tspan>
+        <tspan x="15" y="90" class="keyColor">Frameworks</tspan>: <tspan class="valueColor">Spring Boot</tspan>
+        <tspan x="15" y="110" class="keyColor">Core Competencies</tspan>: <tspan class="valueColor">DSA, OOPs, System Design, DBMS</tspan>
+        <tspan x="15" y="130" class="keyColor">Database Technologies</tspan>: <tspan class="valueColor">MySQL, PostgreSQL, DynamoDB, Redis</tspan> <tspan class="commentColor"></tspan>
+        <tspan x="15" y="150" class="keyColor">Cloud Services</tspan>: <tspan class="valueColor">AWS(Elastic Beanstalk, EC2, S3, RDS, ElastiCache)</tspan>
+        <tspan x="15" y="190" class="keyColor">Messaging and Streaming</tspan>: <tspan class="valueColor">Kafka</tspan>
+        <tspan x="15" y="210" class="keyColor">Testing</tspan>: <tspan class="valueColor">Junit, Mockito</tspan>
+        <tspan x="15" y="230" class="keyColor">Version Control</tspan>: <tspan class="valueColor">Git, GitHub</tspan>
+        <tspan x="15" y="250" class="keyColor">Database Migration Tool</tspan>: <tspan class="valueColor">Flyway</tspan>
 <!--         <tspan x="370" y="290" class="keyColor">change this</tspan>: <tspan class="valueColor">fill something</tspan> -->
-        <tspan x="370" y="290" class="keyColor">Code Portfolios</tspan>:
-        <tspan x="370" y="310">———————————————</tspan>
-        <tspan x="370" y="330" class="keyColor">LeetCode</tspan>: <tspan class="valueColor">sumit_verma_77</tspan> | <tspan class="keyColor">HackerRank</tspan>: <tspan class="valueColor">sumit_verma_77</tspan>
-        <tspan x="370" y="350" class="keyColor">CodeChef</tspan>: <tspan class="valueColor">sumit_verma_7</tspan>  | <tspan class="keyColor">Github</tspan>: <tspan class="valueColor">sumitverma77</tspan>
-       <tspan x="370" y="390" class="keyColor">Contact</tspan>:
-        <tspan x="370" y="410">———————</tspan>
-        <tspan x="370" y="430" class="keyColor">Email</tspan>: <tspan class="valueColor">987sumitverma@gmail.com</tspan> | <tspan class="keyColor">Linkedin</tspan>: <tspan class="valueColor">sumit-verma-</tspan>
+        <tspan x="15" y="290" class="">Code Portfolios</tspan>:
+        <tspan x="15" y="310">————————————————————————————————————————————————————————————————————————————————————————————————————————————</tspan>
+        <tspan x="15" y="330" class="keyColor">LeetCode</tspan>: <tspan class="valueColor">sumit_verma_77</tspan> | <tspan class="keyColor">HackerRank</tspan>: <tspan class="valueColor">sumit_verma_77</tspan>
+        <tspan x="15" y="350" class="keyColor">CodeChef</tspan>: <tspan class="valueColor">sumit_verma_7</tspan>  | <tspan class="keyColor">Github</tspan>: <tspan class="valueColor">sumitverma77</tspan>
+       <tspan x="15" y="390" class="">Contact</tspan>:
+        <tspan x="15" y="410" class="">————————————————————————————————————————————————————————————————————————————————————————————————————————————</tspan>
+        <tspan x="15" y="430" class="keyColor">Email</tspan>: <tspan class="valueColor">987sumitverma@gmail.com</tspan> | <tspan class="keyColor">Linkedin</tspan>: <tspan class="valueColor">sumit-verma-</tspan>
         
     </text>
     
