@@ -56,7 +56,7 @@
         }
     </style>
 
-    <rect x="7.5" y="7.5" width="960px" height="437px" fill="none" stroke="black" stroke-width="15" rx="15"/> <!-- Adjusted Border Rectangle -->
+    <rect x="7.5" y="7.5" width="960px" height="437px" fill="none" stroke="black" stroke-width="7" rx="15"/> <!-- Adjusted Border Rectangle -->
     
     <text x="20" y="30">
         <tspan x="350" y="30">Sumit Verma</tspan> | <tspan>Backend Developer</tspan>
