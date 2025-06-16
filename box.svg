@@ -71,7 +71,7 @@
     <rect x="7.5" y="7.5" width="960px" height="437px" fill="none" stroke="black" stroke-width="7" rx="15"/> <!-- Adjusted Border Rectangle -->
     
     <text x="20" y="30">
-        <tspan x="350" y="30" class="addColor">Sumit Verma</tspan> | <tspan class="addColor" >Backend Developer</tspan>
+        <tspan x="350" y="30" >Sumit Verma</tspan> | <tspan class="addColor" >Backend Developer</tspan>
         <tspan x="20" y="50">———————————————————————————————————————————————————————————————————————————————————————————————————————————</tspan>
         <tspan x="20" y="70" class="keyColor">Programming Languages</tspan>: <tspan class="valueColor">C, C++, Java</tspan>
         <tspan x="20" y="90" class="keyColor">Frameworks</tspan>: <tspan class="valueColor">Spring Boot</tspan>
