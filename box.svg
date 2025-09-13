@@ -76,8 +76,8 @@
         <tspan x="20" y="70" class="keyColor">Programming Languages</tspan>: <tspan class="valueColor">C, C++, Java</tspan>
         <tspan x="20" y="90" class="keyColor">Frameworks</tspan>: <tspan class="valueColor">Spring Boot</tspan>
         <tspan x="20" y="110" class="keyColor">Core Competencies</tspan>: <tspan class="valueColor">DSA, OOPs, System Design, DBMS</tspan>
-        <tspan x="20" y="130" class="keyColor">Database Technologies</tspan>: <tspan class="valueColor">MySQL, PostgreSQL, DynamoDB, Redis</tspan>
-        <tspan x="20" y="150" class="keyColor">Cloud Services</tspan>: <tspan class="valueColor">AWS(Elastic Beanstalk, EC2, S3, RDS, ElastiCache)</tspan>
+        <tspan x="20" y="130" class="keyColor">Database Technologies</tspan>: <tspan class="valueColor">MySQL, PostgreSQL,AWS DynamoDB, Redis, MongoDB, Elasticsearch</tspan>
+        <tspan x="20" y="150" class="keyColor">Cloud Services</tspan>: <tspan class="valueColor">AWS(Elastic Beanstalk, EC2, S3, RDS, ElastiCache, S3)</tspan>
         <tspan x="20" y="170" class="keyColor">DevOps and Automation</tspan>: <tspan class="valueColor">Docker, GitHub Actions (CI/CD)</tspan>
         <tspan x="20" y="190" class="keyColor">Messaging and Streaming</tspan>: <tspan class="valueColor">Kafka</tspan>
         <tspan x="20" y="210" class="keyColor">Testing</tspan>: <tspan class="valueColor">Junit, Mockito</tspan>
