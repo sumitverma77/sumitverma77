@@ -1,0 +1,50 @@
+name: WakaTime Update
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # runs daily
+  workflow_dispatch:
+
+jobs:
+  update-wakatime:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Pick 2-3 random days for this week
+        id: randomdays
+        run: |
+          NUM_COMMITS=$((2 + RANDOM % 2))  # 2 or 3 commits/week
+          DAYS=($(shuf -i 1-7 -n $NUM_COMMITS))
+          echo "RANDOM_DAYS=${DAYS[*]}" >> $GITHUB_ENV
+          echo "Picked days: ${DAYS[*]}"
+
+      - name: Check if today is a commit day
+        id: checkday
+        run: |
+          TODAY=$(date +'%u')
+          if [[ " $RANDOM_DAYS " =~ " $TODAY " ]]; then
+            echo "RUN_JOB=true" >> $GITHUB_ENV
+          else
+            echo "RUN_JOB=false" >> $GITHUB_ENV
+          fi
+
+      - name: Update WakaTime README
+        if: env.RUN_JOB == 'true'
+        uses: anmol098/waka-readme-stats@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit & push with randomized time
+        if: env.RUN_JOB == 'true'
+        run: |
+          HOUR=$((RANDOM % 24))
+          MINUTE=$((RANDOM % 60))
+          DATE=$(date -u +"%Y-%m-%dT$HOUR:$MINUTE:00Z")
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add README.md
+          git commit -m "Random WakaTime update" --date="$DATE" || echo "No changes to commit"
+          git push
