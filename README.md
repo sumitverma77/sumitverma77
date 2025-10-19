@@ -142,8 +142,12 @@
 ---
 ## 🧩 Development Graph
 
+<!--START_SECTION:waka-->
+
+<!--END_SECTION:waka-->
+
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=sumit_verma_77&theme=tokyonight&hide_border=true&v=2" height="300" />
+  <img src="https://wakatime.com/badge/user/d3229271-e206-41db-9091-300fd67ac920.svg" alt="Total time coded since joining WakaTime" />
 </p>
 
 ---
