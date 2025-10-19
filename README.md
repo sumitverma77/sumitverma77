@@ -68,34 +68,27 @@
 </p> -->
 
 <!-- 💬 Typing Intro Animation -->
+<h2 align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=30&duration=3000&color=00FFFF&center=true&vCenter=true&width=700&lines=Hey+👋+I'm+Sumit+Verma;Backend+Engineer+%7C+Automation+Addict;Clean+Code+%7C+Cloud+%7C+AI;Welcome+to+My+Github+🌐" alt="Typing Intro" />
+</h2>
+
 <h3 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=500&size=25&pause=1000&color=00F5FF&center=true&vCenter=true&width=600&lines=Backend+Engineer+%7C+Problem+Solver;Cloud+Native+%7C+DevOps+Automation;Clean+Code+Evangelist;AI%2FML+%7C+System+Design+Enthusiast;Welcome+to+My+Digital+Playground+🌐" alt="Typing" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=500&size=25&pause=1000&color=00F5FF&center=true&vCenter=true&width=600&lines=Backend+Engineer;Problem+Solver;DevOps+%26+Automation;Clean+Code+%26+System+Design;Welcome+to+My+Digital+Playground+🌐" alt="Typing Skills" />
 </h3>
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=30&color=00FFFF&center=true&vCenter=true&width=700&lines=Hey+👋+I'm+Sumit+Verma;Backend+Engineer+%7C+Automation+Addict;Clean+Code+%7C+Cloud+%7C+AI;Welcome+to+My+Neural+Network+🌐" />
-</p>
+
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=3" width="60%"/>
 </p>
 
----
+<!-- ---
 
 ## 🧠 About Me
 
 👨‍💻 **Backend Engineer** passionate about **scalable systems**, **automation**, and **developer experience**.  
-🚀 Working primarily with **Java**, **Spring Boot**, **Docker**, and **AWS**.  
-🌍 Constantly exploring new tools, frameworks, and architectures.  
-💬 Believer in *code simplicity, automation, and elegant design patterns.*  
-🎯 Motto: *Automate Everything. Measure Performance. Refactor Constantly.*
+🚀 Working primarily with **Java**, **Spring Boot**,and **AWS**.  
+🎯 Motto: *Automate Everything. Measure Performance. Refactor Constantly.* -->
 
----
-
-## ⚙️ Tech Arsenal
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,aws,docker,git,github,linux,python,bash,mysql,postgres,redis,vscode,idea,postman" />
-</p>
 
 ---
 
@@ -105,9 +98,19 @@
 |---------------|----------------|
 | Backend Development | Java, Spring Boot, REST, Microservices |
 | Cloud & DevOps | AWS, Docker, GitHub Actions, CI/CD |
+| Languages | C, C++, Java, Sql |
+| Testing | JUnit, Mockito
 | Architecture & Design | SOLID, Clean Code, Scalable Design |
-| Data & Automation | SQL, Redis, Cron Jobs, Shell Scripts |
-| Problem Solving | DSA, Graphs, Trees, DP, ICPC Regionalist |
+| Database | Mysql, Postgresql, MongoDB, DynamoDB, Redis, ElasticSearch |
+| Problem Solving | ICPC Regionalist'2024 |
+
+---
+
+## ⚙️ Tech Arsenal
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=java,spring,go,c,cpp,aws,docker,git,github,mysql,postgres,redis,mongodb,dynamodb,elasticsearch,kafka,maven,vscode,idea,postman" />
+</p>
 
 ---
 
@@ -115,11 +118,11 @@
 
 | 🪄 Project | 🌟 Description | 💻 Tech Stack |
 |------------|----------------|----------------|
-| **fin-ping-service** | Intelligent bank status checker to reduce redundant requests | Java • API • Polling Logic |
+| **fin-ping-service** | Intelligent bank status checker to reduce waste fetch from Account Aggrigator | Java • AWS • Polling Logic |
 | **agri-weather-alert** | Weather alerts for farmers via SMS/Voice in native languages | Spring Boot • Twilio • Cron |
 | **applynow-backend** | Job platform with authentication & workflows | Spring Boot • REST • JWT |
 | **cloud-ready-springboot** | Fully containerized backend with CI/CD to AWS | Docker • AWS • GitHub Actions |
-| **contact-management-system** | CRUD + Prefix search (Trie-based) | Java • Spring • Trie Algorithm |
+<!-- | **contact-management-system** | CRUD + Prefix search (Trie-based) | Java • Spring • Trie Algorithm | -->
 
 🔗 Explore more at → [github.com/sumitverma77?tab=repositories](https://github.com/sumitverma77?tab=repositories)
 
@@ -142,6 +145,7 @@
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/wakatime?username=sumit_verma_77&theme=tokyonight&hide_border=true&v=2" height="300" />
 </p>
+
 ---
 
 ## 🔥 Achievements & Highlights
