@@ -142,7 +142,6 @@
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/wakatime?username=sumit_verma_77&theme=tokyonight&hide_border=true&v=2" height="300" />
 </p>
-
 ---
 
 ## 🔥 Achievements & Highlights
@@ -199,7 +198,7 @@
     <img src="https://img.shields.io/badge/LinkedIn-Sumit%20Verma-blue?style=for-the-badge&logo=linkedin" />
   </a>
   <a href="mailto:987sumitverma@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Me-red?style=for-the-badge&logo=gmail" />
+    <img src="https://img.shields.io/badge/Email-987sumitverma@gmail.com-red?style=for-the-badge&logo=gmail" />
   </a>
   <a href="https://sumitverma.me">
     <img src="https://img.shields.io/badge/Portfolio-sumitverma.me-00C897?style=for-the-badge&logo=firefox" />
