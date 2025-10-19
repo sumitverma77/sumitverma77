@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "0 0 * * *"  
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   update-wakatime:
@@ -47,7 +50,8 @@ jobs:
           DATE=$(date -u +"%Y-%m-%dT$HOUR:$MINUTE:00Z")
           git config user.name "Sumit Verma"
           git config user.email "987sumitverma@gmail.com"
+          git fetch origin main
+          git reset --hard origin/main
           git add README.md
           git commit -m "Random WakaTime update" --date="$DATE" || echo "No changes to commit"
-          git pull origin main --rebase
           git push origin main
