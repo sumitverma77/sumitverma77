@@ -224,9 +224,6 @@ Jupyter Notebook         1 repo              █░░░░░░░░░░�
  Last Updated on 19/10/2025 08:51:05 UTC
 <!--END_SECTION:waka-->
 
-<p align="center">
-  <img src="https://wakatime.com/badge/user/d3229271-e206-41db-9091-300fd67ac920.svg" alt="Total time coded since joining WakaTime" />
-</p>
 
 ---
 
