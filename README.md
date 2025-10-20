@@ -123,8 +123,8 @@
 | **applynow-backend** | Job platform with authentication & workflows | Spring Boot • REST • JWT |
 | **cloud-ready-springboot** | Fully containerized backend with CI/CD to AWS | Docker • AWS • GitHub Actions |
 <!-- | **contact-management-system** | CRUD + Prefix search (Trie-based) | Java • Spring • Trie Algorithm | -->
-
-🔗 Explore more at → [github.com/sumitverma77?tab=repositories](https://github.com/sumitverma77?tab=repositories) -->
+<!-- 
+🔗 Explore more at → [github.com/sumitverma77?tab=repositories](https://github.com/sumitverma77?tab=repositories) --> -->
 
 ---
 
