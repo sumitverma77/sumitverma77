@@ -112,7 +112,7 @@
   <img src="https://skillicons.dev/icons?i=java,spring,go,c,cpp,aws,docker,git,github,mysql,postgres,redis,mongodb,dynamodb,elasticsearch,kafka,maven,vscode,idea,postman" />
 </p>
 
----
+<!-- ---
 
 ## 🚀 Featured Projects
 
@@ -124,7 +124,7 @@
 | **cloud-ready-springboot** | Fully containerized backend with CI/CD to AWS | Docker • AWS • GitHub Actions |
 <!-- | **contact-management-system** | CRUD + Prefix search (Trie-based) | Java • Spring • Trie Algorithm | -->
 
-🔗 Explore more at → [github.com/sumitverma77?tab=repositories](https://github.com/sumitverma77?tab=repositories)
+🔗 Explore more at → [github.com/sumitverma77?tab=repositories](https://github.com/sumitverma77?tab=repositories) -->
 
 ---
 
@@ -222,12 +222,12 @@ Jupyter Notebook         1 repo              █░░░░░░░░░░�
 
 
 ---
-
+<!-- 
 ## 🔥 Achievements & Highlights
 
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=sumitverma77&theme=tokyonight&no-frame=true&no-bg=true&margin-w=15" />
-</p>
+</p> -->
 
 ---
 
@@ -238,12 +238,12 @@ Jupyter Notebook         1 repo              █░░░░░░░░░░�
 </p>
 
 ---
-
+<!-- 
 ## 🌈 Random Dev Quote
 
 <p align="center">
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
-</p>
+</p> -->
 
 <!-- ---
 
