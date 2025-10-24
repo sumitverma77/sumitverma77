@@ -17,10 +17,10 @@ jobs:
         with:
           token: ${{ secrets.GH_TOKEN }} 
 
-      - name: Pick 2-3 random days for this week
+      - name: Pick 3-4 random days for this week
         id: randomdays
         run: |
-          NUM_COMMITS=$((2 + RANDOM % 2))
+          NUM_COMMITS=$((3 + RANDOM % 2))
           DAYS=($(shuf -i 1-7 -n $NUM_COMMITS))
           echo "RANDOM_DAYS=${DAYS[*]}" >> $GITHUB_ENV
           echo "Picked days: ${DAYS[*]}"
