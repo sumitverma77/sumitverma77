@@ -200,7 +200,7 @@ Jupyter Notebook         1 repo              █░░░░░░░░░░�
 <!--END_SECTION:waka-->
 
 
----
+
 <!-- 
 ## 🔥 Achievements & Highlights
 
@@ -210,13 +210,17 @@ Jupyter Notebook         1 repo              █░░░░░░░░░░�
 
 ---
 
-## 🐍 Watch My Code Come Alive
+<a href="https://wakatime.com">
+    <img src="https://wakatime.com/share/@sumit_verma_77/8bd412f1-25f7-4890-849c-41d45aba6ee6.png" />
+</a>
+
+
+<!-- ## 🐍 Watch My Code Come Alive
 
 <p align="center">
   <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake-dark.svg" alt="snake animation" />
-</p>
+</p> -->
 
----
 <!-- 
 ## 🌈 Random Dev Quote
 
