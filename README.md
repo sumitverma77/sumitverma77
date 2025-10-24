@@ -126,7 +126,7 @@
 
 🔗 Explore more at → [github.com/sumitverma77?tab=repositories](https://github.com/sumitverma77?tab=repositories) -->
 
----
+<!-- ---
 
 ## 📊 My Developer Dashboard
 
@@ -137,7 +137,7 @@
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=sumitverma77&bg_color=0D1117&color=00F5FF&line=00FFFF&point=FFFFFF&hide_border=true" alt="Activity Graph" />
-</p>
+</p> -->
 
 ---
 ## 🧩 Development Graph
@@ -208,11 +208,13 @@ Jupyter Notebook         1 repo              █░░░░░░░░░░�
   <img src="https://github-profile-trophy.vercel.app/?username=sumitverma77&theme=tokyonight&no-frame=true&no-bg=true&margin-w=15" />
 </p> -->
 
----
+<!-- ---
 
+##  My Devlopment Routine
 <a href="https://wakatime.com">
-    <img src="https://wakatime.com/share/@sumit_verma_77/8bd412f1-25f7-4890-849c-41d45aba6ee6.png" />
+  <img src="https://wakatime.com/share/@sumit_verma_77/8bd412f1-25f7-4890-849c-41d45aba6ee6.png" width="100%" />
 </a>
+ -->
 
 
 <!-- ## 🐍 Watch My Code Come Alive
