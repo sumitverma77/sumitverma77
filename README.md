@@ -68,13 +68,14 @@
 </p> -->
 
 <!-- 💬 Typing Intro Animation -->
-<h2 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=30&duration=3000&color=00FFFF&center=true&vCenter=true&width=700&lines=Hey+👋+I'm+Sumit+Verma;Backend+Engineer+%7C+Automation+Addict;Clean+Code+%7C+Cloud+%7C+AI;Welcome+to+My+Github+🌐" alt="Typing Intro" />
-</h2>
+<h1 align="center" style="color:#00FFFF;">
+  Hey 👋 I'm Sumit Verma
+</h1>
 
-<h3 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=500&size=25&pause=1000&color=00F5FF&center=true&vCenter=true&width=600&lines=Backend+Engineer;Problem+Solver;DevOps+%26+Automation;Clean+Code+%26+System+Design;Welcome+to+My+Digital+Playground+🌐" alt="Typing Skills" />
-</h3>
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=500&size=25&duration=1800&pause=700&color=00F5FF&center=true&vCenter=true&width=600&lines=Backend+Engineer+%26+Problem+Solver;DevOps+%26+Automation;Clean+Code+%26+System+Design" alt="Typing Skills" />
+</p>
+
 
 
 <p align="center">
@@ -255,25 +256,27 @@ Jupyter Notebook         1 repo              █░░░░░░░░░░�
 - 🎮 Favorite pastime: Code + Coffee + Lo-fi -->
 
 ---
-## 📱 Connect With Me
+## 🌍 Connect With Me
 
 <p align="center">
   <a href="https://linkedin.com/in/sumit-verma-" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Sumit%20Verma-blue?style=for-the-badge&logo=linkedin" />
+    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
   <a href="mailto:987sumitverma@gmail.com">
-    <img src="https://img.shields.io/badge/Email-987sumitverma@gmail.com-red?style=for-the-badge&logo=gmail" />
+    <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt ="Email" />
   </a>
-  <a href="https://sumitverma.me">
-    <img src="https://img.shields.io/badge/Portfolio-sumitverma.me-00C897?style=for-the-badge&logo=firefox" />
-  </a>
+   <a href="https://sumitverma77.github.io/" target="_blank" rel="noopener noreferrer">
+  <img src="https://img.shields.io/badge/Portfolio-4285F4.svg?logo=googlechrome&logoColor=white" alt="Portfolio" />
+</a>
+  <a href="https://github.com/sumitverma77"><img src="https://img.shields.io/badge/GitHub-171515?logo=github&logoColor=white" alt="GitHub" /></a>
+
+
 </p>
 
+<!-- ---
 
----
+> *“If it’s repetitive, automate it. If it’s complex, simplify it. If it’s perfect, make it faster.”* ⚡ -->
 
-> *“If it’s repetitive, automate it. If it’s complex, simplify it. If it’s perfect, make it faster.”* ⚡
-
-<p align="center">
+<!-- <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer&text=Thanks+for+Visiting!+💙&fontSize=20" />
-</p>
+</p> -->
