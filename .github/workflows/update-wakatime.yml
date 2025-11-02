@@ -36,8 +36,8 @@ jobs:
           fi
 
       - name: Update WakaTime README
-        # if: env.RUN_JOB == 'true' && github.event_name == 'schedule'
-        if: always()
+        if: env.RUN_JOB == 'true' && github.event_name == 'schedule'
+        # if: always()
         uses: sumitverma77/waka-readme-stats@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
@@ -63,5 +63,6 @@ jobs:
       #     git add README.md
       #     git commit -m "Random WakaTime update" --date="$DATE" || echo "No changes to commit"
       #     git push origin main
+      
       
       #
