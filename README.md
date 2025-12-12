@@ -105,13 +105,13 @@
 | Database | Mysql, Postgresql, MongoDB, DynamoDB, Redis, ElasticSearch |
 | Problem Solving | ICPC Regionalist'2024 |
 
----
+<!-- --- -->
 
-## ⚙️ Tech Arsenal
+<!-- ## ⚙️ Tech Arsenal
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=java,spring,go,c,cpp,aws,docker,git,github,mysql,postgres,redis,mongodb,dynamodb,elasticsearch,kafka,maven,vscode,idea,postman" />
-</p>
+</p> -->
 
 <!-- ---
 
