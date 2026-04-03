@@ -1,0 +1,57 @@
+name: 🤖 Update GitHub Stats README
+
+on:
+  schedule:
+    # Run daily at 00:30 UTC (06:00 IST)
+    - cron: "30 0 * * *"
+  workflow_dispatch: # Allow manual trigger from Actions UI
+
+jobs:
+  update-readme:
+    name: Fetch GitHub Stats & Update README
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required to push the updated README
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Uses the built-in GITHUB_TOKEN — no manual PAT required
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🚀 Run README bot
+        env:
+          # Built-in token — automatically scoped to this repo, no setup needed
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: sumitverma77
+        run: |
+          echo "Starting README automation..."
+          START_TIME=$(date +%s%3N)
+          node scripts/index.js
+          END_TIME=$(date +%s%3N)
+          echo "Execution time: $((END_TIME - START_TIME))ms"
+
+      - name: 💾 Commit & push if README changed
+        run: |
+          git config user.name "readme-bot[bot]"
+          git config user.email "readme-bot@users.noreply.github.com"
+          # Safe commit pattern: only push if there is an actual diff
+          if git diff --quiet README.md; then
+            echo "✅ No changes detected — README is already up-to-date."
+          else
+            git add README.md
+            git commit -m "chore(readme): auto-update GitHub stats [skip ci]"
+            git push
+            echo "✅ README.md updated and pushed successfully."
+          fi
