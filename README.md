@@ -97,7 +97,7 @@
 
 | 🧭 Focus Area | ⚡ Technologies |
 |---------------|----------------|
-| Backend Development | Java, Spring Boot, REST, Microservices |
+| Backend Development | Java, Spring Boot, REST, Microservices, Kafka |
 | Cloud & DevOps | AWS, Docker, GitHub Actions, CI/CD |
 | Languages | C, C++, Java, Sql |
 | Testing | JUnit, Mockito
