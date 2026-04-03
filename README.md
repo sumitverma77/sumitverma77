@@ -76,6 +76,10 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=500&size=20&duration=1800&pause=700&color=00F5FF&center=true&vCenter=true&width=600&lines=Backend+Engineer+%26+Problem+Solver;DevOps+%26+Automation;Clean+Code+%26+System+Design" alt="Typing Skills" />
 </p>
 
+<p align="center">
+  <sub>⚡ This README is auto-generated using a custom GitHub automation system built with <strong>Node.js</strong>, clean architecture, and scheduled CI workflows.</sub>
+</p>
+
 
 
 <p align="center">
@@ -97,7 +101,7 @@
 
 | 🧭 Focus Area | ⚡ Technologies |
 |---------------|----------------|
-| Backend Development | Java, Spring Boot, REST, Microservices |
+| Backend Development | Java, Spring Boot, REST, Microservices, Kafka |
 | Cloud & DevOps | AWS, Docker, GitHub Actions, CI/CD |
 | Languages | C, C++, Java, Sql |
 | Testing | JUnit, Mockito
@@ -139,6 +143,11 @@
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=sumitverma77&bg_color=0D1117&color=00F5FF&line=00FFFF&point=FFFFFF&hide_border=true" alt="Activity Graph" />
 </p> -->
+
+---
+
+<!-- GITHUB_STATS:START -->
+<!-- GITHUB_STATS:END -->
 
 ---
 ## 🧩 Development Graph

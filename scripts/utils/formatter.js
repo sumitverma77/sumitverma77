@@ -1,0 +1,175 @@
+/**
+ * Formatter Utility — Pure Markdown Formatters
+ * All functions are pure (no side effects, no I/O).
+ * Adding a new section = adding a new export function (Open/Closed Principle).
+ *
+ * Failure fallback: all formatters gracefully degrade to a safe message
+ * when data is null/undefined — prevents broken README sections.
+ */
+
+// ── Visual helpers ────────────────────────────────────────────────────────────
+
+/**
+ * Build a unicode block progress bar.
+ * @param {number} pct - float 0..100
+ * @param {number} width - total character width
+ */
+function progressBar(pct, width = 20) {
+    const filled = Math.round((Math.min(100, Math.max(0, pct)) / 100) * width);
+    return '█'.repeat(filled) + '░'.repeat(width - filled);
+}
+
+/**
+ * Convert an ISO date to human-readable relative time.
+ * @param {string} isoDate
+ */
+function timeAgo(isoDate) {
+    if (!isoDate) return 'unknown';
+    const diff = Date.now() - new Date(isoDate).getTime();
+    const days = Math.floor(diff / 86400000);
+    if (days === 0) return 'today';
+    if (days === 1) return '1 day ago';
+    if (days < 30) return `${days} days ago`;
+    const months = Math.floor(days / 30);
+    if (months === 1) return '1 month ago';
+    if (months < 12) return `${months} months ago`;
+    return `${Math.floor(months / 12)}y ago`;
+}
+
+// ── Section formatters ────────────────────────────────────────────────────────
+
+/**
+ * Format top languages as a Markdown table with visual bars.
+ * @param {Array<{language, percentage}>} langs
+ */
+export function formatLanguages(langs) {
+    if (!langs || langs.length === 0) {
+        return '> ⚠️ _Language data temporarily unavailable._';
+    }
+
+    const rows = langs.map(({ language, percentage }) => {
+        const pct = parseFloat(percentage);
+        const bar = progressBar(pct);
+        return `| ${language.padEnd(18)} | \`${bar}\` | ${String(percentage).padStart(5)}% |`;
+    });
+
+    return [
+        '| Language           | Usage                        | Share   |',
+        '|--------------------|------------------------------|---------|',
+        ...rows,
+    ].join('\n');
+}
+
+/**
+ * Format recent repos as a Markdown table.
+ * @param {Array<{name, url, description, language, stars, pushedAt}>} repos
+ */
+export function formatRecentRepos(repos) {
+    if (!repos || repos.length === 0) {
+        return '> ⚠️ _Repository data temporarily unavailable._';
+    }
+
+    const rows = repos.map(({ name, url, description, language, stars, pushedAt }) => {
+        const desc = description.length > 48 ? description.substring(0, 45) + '...' : description;
+        return `| [${name}](${url}) | ${desc} | ${language ?? 'N/A'} | ⭐ ${stars} | ${timeAgo(pushedAt)} |`;
+    });
+
+    return [
+        '| Repository | Description | Language | Stars | Last Push |',
+        '|------------|-------------|----------|-------|-----------|',
+        ...rows,
+    ].join('\n');
+}
+
+/**
+ * Format the latest activity line.
+ * @param {{repo, repoUrl, branch, message, timestamp} | null} activity
+ */
+export function formatActivity(activity) {
+    if (!activity) return '> ⚠️ _Activity data temporarily unavailable._';
+    const msg = activity.message.split('\n')[0].substring(0, 100); // first line, max 100 chars
+    return [
+        `> 🔨 **[${activity.repo}](${activity.repoUrl})** · \`${activity.branch}\` · ${timeAgo(activity.timestamp)}`,
+        `> `,
+        `> _"${msg}"_`,
+    ].join('\n');
+}
+
+/**
+ * Format the Insights Engine section.
+ * @param {{mostActiveRepo, commitFrequency, weeklyActivity} | null} insights
+ */
+export function formatInsights(insights) {
+    if (!insights) return '> ⚠️ _Insights data temporarily unavailable._';
+
+    const { mostActiveRepo, commitFrequency, weeklyActivity } = insights;
+
+    const repoLine = mostActiveRepo
+        ? `| 🏆 Most Active Repo | **[${mostActiveRepo.name}](${mostActiveRepo.url})** | ${mostActiveRepo.language} | ⭐ ${mostActiveRepo.stars} |`
+        : '| 🏆 Most Active Repo | _N/A_ | — | — |';
+
+    const freqLine = commitFrequency
+        ? `| 📈 Commit Frequency | **${commitFrequency.commitsLast4Weeks}** commits in last 4 weeks | ~${commitFrequency.perWeek}/week | — |`
+        : '';
+
+    const dayLine = weeklyActivity?.busiestDay && weeklyActivity.busiestDay !== 'N/A'
+        ? `| 📅 Most Active Day  | **${weeklyActivity.busiestDay}** | — | — |`
+        : '';
+
+    const rows = [repoLine, freqLine, dayLine].filter(Boolean);
+
+    return [
+        '| Insight | Detail | Info | Extra |',
+        '|---------|--------|------|-------|',
+        ...rows,
+    ].join('\n');
+}
+
+/**
+ * Compose the complete GitHub stats block — injected between README markers.
+ * @param {{totalRepos, totalCommits, recentRepos, languages, activity, insights}} data
+ * @param {string} updatedAt - ISO timestamp
+ */
+export function formatStatsBlock(data, updatedAt) {
+    const { totalRepos, totalCommits, recentRepos, languages, activity, insights } = data;
+
+    return `
+## 📊 GitHub Stats — Auto-Updated
+
+> ⚡ *This section is auto-generated by a custom Node.js automation system using GitHub REST API, clean architecture, and scheduled CI/CD via GitHub Actions.*
+
+| Metric | Value |
+|--------|-------|
+| 📁 Public Repositories | **${totalRepos}** |
+| 💾 Total Commits | **${totalCommits.toLocaleString()}** |
+| 🧠 Primary Language | **${languages?.[0]?.language ?? 'N/A'}** |
+
+---
+
+### 🗂️ Recent Repositories
+
+${formatRecentRepos(recentRepos)}
+
+---
+
+### 🌐 Top Languages
+
+${formatLanguages(languages)}
+
+---
+
+### ⚡ Latest Activity
+
+${formatActivity(activity)}
+
+---
+
+### 🔥 Insights Engine
+
+${formatInsights(insights)}
+
+---
+
+<sub>🤖 Auto-updated by <a href=".github/workflows/update-readme.yml">readme-bot</a> · ${new Date(updatedAt).toUTCString()}</sub>
+`.trim();
+}

@@ -1,0 +1,17 @@
+{
+  "name": "sumitverma77-readme-automation",
+  "version": "1.0.0",
+  "description": "Production-grade GitHub README automation system",
+  "type": "module",
+  "main": "scripts/index.js",
+  "scripts": {
+    "start": "node scripts/index.js",
+    "dev": "node --env-file=.env scripts/index.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
