@@ -207,65 +207,7 @@
 
 <!-- GITHUB_STATS:END -->
 
----
-## 🧩 Development Graph
 
-<!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-255%20hrs%2049%20mins-blue?style=flat)
-
-**I'm a Night 🦉** 
-
-```text
-🌞 Morning                1070 commits        ███░░░░░░░░░░░░░░░░░░░░░░   12.19 % 
-🌆 Daytime                2922 commits        ████████░░░░░░░░░░░░░░░░░   33.28 % 
-🌃 Evening                3506 commits        ██████████░░░░░░░░░░░░░░░   39.93 % 
-🌙 Night                  1283 commits        ████░░░░░░░░░░░░░░░░░░░░░   14.61 % 
-```
-📅 **I'm Most Productive on Wednesday** 
-
-```text
-Monday                   800 commits         ██░░░░░░░░░░░░░░░░░░░░░░░   09.11 % 
-Tuesday                  1635 commits        █████░░░░░░░░░░░░░░░░░░░░   18.62 % 
-Wednesday                1778 commits        █████░░░░░░░░░░░░░░░░░░░░   20.25 % 
-Thursday                 1216 commits        ███░░░░░░░░░░░░░░░░░░░░░░   13.85 % 
-Friday                   945 commits         ███░░░░░░░░░░░░░░░░░░░░░░   10.76 % 
-Saturday                 1256 commits        ████░░░░░░░░░░░░░░░░░░░░░   14.30 % 
-Sunday                   1151 commits        ███░░░░░░░░░░░░░░░░░░░░░░   13.11 % 
-```
-
-
-📊 **This Week I Spent My Time On** 
-
-```text
-🕑︎ Time Zone: Asia/Kolkata
-
-💬 Programming Languages: 
-Java                     1 hr 36 mins        ██████████████████░░░░░░░   73.92 % 
-YAML                     16 mins             ███░░░░░░░░░░░░░░░░░░░░░░   12.64 % 
-Java Properties          14 mins             ███░░░░░░░░░░░░░░░░░░░░░░   10.92 % 
-Properties               2 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   01.74 % 
-Docker                   0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.55 % 
-
-🔥 Editors: 
-IntelliJ IDEA            2 hrs 8 mins        █████████████████████████   98.40 % 
-VS Code                  2 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░   01.60 % 
-```
-
-**I Mostly Code in Java** 
-
-```text
-Java                     24 repos            █████████████░░░░░░░░░░░░   53.33 % 
-HTML                     8 repos             ████░░░░░░░░░░░░░░░░░░░░░   17.78 % 
-Python                   2 repos             █░░░░░░░░░░░░░░░░░░░░░░░░   04.44 % 
-Go                       1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   02.22 % 
-Jupyter Notebook         1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   02.22 % 
-```
-
-
-
-
- Last Updated on 01/04/2026 02:45:11 UTC
-<!--END_SECTION:waka-->
 
 
 

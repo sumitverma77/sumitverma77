@@ -1,28 +1,21 @@
 /**
- * Formatter Utility — Pure Markdown Formatters
- * All functions are pure (no side effects, no I/O).
- * Adding a new section = adding a new export function (Open/Closed Principle).
+ * Formatter Utility — Pure Markdown Formatters (v2)
  *
- * Failure fallback: all formatters gracefully degrade to a safe message
- * when data is null/undefined — prevents broken README sections.
+ * v2 changes:
+ *   - formatLanguages() now uses repoCount (not bytes) — matches languageService v2
+ *   - Label updated: "Primary Language (by repo usage)"
+ *   - Language bars show "(N repos)" instead of a percentage share
+ *   - All failure fallbacks preserved
+ *   - formatInsights() and formatStatsBlock() updated for new language shape
  */
 
 // ── Visual helpers ────────────────────────────────────────────────────────────
 
-/**
- * Build a unicode block progress bar.
- * @param {number} pct - float 0..100
- * @param {number} width - total character width
- */
 function progressBar(pct, width = 20) {
     const filled = Math.round((Math.min(100, Math.max(0, pct)) / 100) * width);
     return '█'.repeat(filled) + '░'.repeat(width - filled);
 }
 
-/**
- * Convert an ISO date to human-readable relative time.
- * @param {string} isoDate
- */
 function timeAgo(isoDate) {
     if (!isoDate) return 'unknown';
     const diff = Date.now() - new Date(isoDate).getTime();
@@ -39,30 +32,32 @@ function timeAgo(isoDate) {
 // ── Section formatters ────────────────────────────────────────────────────────
 
 /**
- * Format top languages as a Markdown table with visual bars.
- * @param {Array<{language, percentage}>} langs
+ * Format top languages by REPO COUNT (not bytes).
+ * Each entry: { language, repoCount, percentage }
+ *
+ * Output example:
+ *   | Java   | ████████████████░░░░ | 10 repos | 53.3% |
  */
 export function formatLanguages(langs) {
     if (!langs || langs.length === 0) {
         return '> ⚠️ _Language data temporarily unavailable._';
     }
 
-    const rows = langs.map(({ language, percentage }) => {
-        const pct = parseFloat(percentage);
-        const bar = progressBar(pct);
-        return `| ${language.padEnd(18)} | \`${bar}\` | ${String(percentage).padStart(5)}% |`;
+    const rows = langs.map(({ language, repoCount, percentage }) => {
+        const bar = progressBar(parseFloat(percentage));
+        const repoLabel = repoCount === 1 ? '1 repo' : `${repoCount} repos`;
+        return `| ${language.padEnd(20)} | \`${bar}\` | ${repoLabel.padStart(8)} | ${String(percentage).padStart(5)}% |`;
     });
 
     return [
-        '| Language           | Usage                        | Share   |',
-        '|--------------------|------------------------------|---------|',
+        '| Language             | Usage                        |    Repos | Share   |',
+        '|----------------------|------------------------------|----------|---------|',
         ...rows,
     ].join('\n');
 }
 
 /**
  * Format recent repos as a Markdown table.
- * @param {Array<{name, url, description, language, stars, pushedAt}>} repos
  */
 export function formatRecentRepos(repos) {
     if (!repos || repos.length === 0) {
@@ -83,11 +78,10 @@ export function formatRecentRepos(repos) {
 
 /**
  * Format the latest activity line.
- * @param {{repo, repoUrl, branch, message, timestamp} | null} activity
  */
 export function formatActivity(activity) {
     if (!activity) return '> ⚠️ _Activity data temporarily unavailable._';
-    const msg = activity.message.split('\n')[0].substring(0, 100); // first line, max 100 chars
+    const msg = activity.message.split('\n')[0].substring(0, 100);
     return [
         `> 🔨 **[${activity.repo}](${activity.repoUrl})** · \`${activity.branch}\` · ${timeAgo(activity.timestamp)}`,
         `> `,
@@ -97,26 +91,31 @@ export function formatActivity(activity) {
 
 /**
  * Format the Insights Engine section.
- * @param {{mostActiveRepo, commitFrequency, weeklyActivity} | null} insights
  */
 export function formatInsights(insights) {
     if (!insights) return '> ⚠️ _Insights data temporarily unavailable._';
 
     const { mostActiveRepo, commitFrequency, weeklyActivity } = insights;
 
-    const repoLine = mostActiveRepo
-        ? `| 🏆 Most Active Repo | **[${mostActiveRepo.name}](${mostActiveRepo.url})** | ${mostActiveRepo.language} | ⭐ ${mostActiveRepo.stars} |`
-        : '| 🏆 Most Active Repo | _N/A_ | — | — |';
+    const rows = [];
 
-    const freqLine = commitFrequency
-        ? `| 📈 Commit Frequency | **${commitFrequency.commitsLast4Weeks}** commits in last 4 weeks | ~${commitFrequency.perWeek}/week | — |`
-        : '';
+    if (mostActiveRepo) {
+        rows.push(
+            `| 🏆 Most Active Repo | **[${mostActiveRepo.name}](${mostActiveRepo.url})** | ${mostActiveRepo.language} | ⭐ ${mostActiveRepo.stars} |`
+        );
+    }
+    if (commitFrequency) {
+        rows.push(
+            `| 📈 Commit Frequency | **${commitFrequency.commitsLast4Weeks}** commits in last 4 weeks | ~${commitFrequency.perWeek}/week | — |`
+        );
+    }
+    if (weeklyActivity?.busiestDay && weeklyActivity.busiestDay !== 'N/A') {
+        rows.push(
+            `| 📅 Most Active Day  | **${weeklyActivity.busiestDay}** | — | — |`
+        );
+    }
 
-    const dayLine = weeklyActivity?.busiestDay && weeklyActivity.busiestDay !== 'N/A'
-        ? `| 📅 Most Active Day  | **${weeklyActivity.busiestDay}** | — | — |`
-        : '';
-
-    const rows = [repoLine, freqLine, dayLine].filter(Boolean);
+    if (rows.length === 0) return '> ⚠️ _Insights data temporarily unavailable._';
 
     return [
         '| Insight | Detail | Info | Extra |',
@@ -126,23 +125,26 @@ export function formatInsights(insights) {
 }
 
 /**
- * Compose the complete GitHub stats block — injected between README markers.
+ * Compose the complete stats block injected into README between marker comments.
  * @param {{totalRepos, totalCommits, recentRepos, languages, activity, insights}} data
  * @param {string} updatedAt - ISO timestamp
  */
 export function formatStatsBlock(data, updatedAt) {
     const { totalRepos, totalCommits, recentRepos, languages, activity, insights } = data;
 
+    // Primary language = most frequent language by repo count
+    const primaryLanguage = languages?.[0]?.language ?? 'N/A';
+
     return `
 ## 📊 GitHub Stats — Auto-Updated
 
-> ⚡ *This section is auto-generated by a custom Node.js automation system using GitHub REST API, clean architecture, and scheduled CI/CD via GitHub Actions.*
+> ⚡ *Auto-generated by a custom Node.js system using GitHub REST API, clean architecture, and scheduled CI/CD.*
 
 | Metric | Value |
 |--------|-------|
 | 📁 Public Repositories | **${totalRepos}** |
 | 💾 Total Commits | **${totalCommits.toLocaleString()}** |
-| 🧠 Primary Language | **${languages?.[0]?.language ?? 'N/A'}** |
+| 🧠 Primary Language (by repo usage) | **${primaryLanguage}** |
 
 ---
 
@@ -152,7 +154,7 @@ ${formatRecentRepos(recentRepos)}
 
 ---
 
-### 🌐 Top Languages
+### 🌐 Top Languages (by repo count)
 
 ${formatLanguages(languages)}
 
