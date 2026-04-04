@@ -3,6 +3,8 @@
  * Generates an animated SVG with glitch effects and neon aesthetic.
  */
 
+import config from '../config/config.js';
+
 export function generateLeetCodeSvg(stats) {
     if (!stats) return '';
 
@@ -85,6 +87,16 @@ export function generateLeetCodeSvg(stats) {
                     100% { opacity: 1; filter: drop-shadow(0 0 10px #FF00FF); }
                 }
 
+                /* Blink for LIVE */
+                .blink {
+                    animation: blink-anim 1s infinite;
+                }
+                
+                @keyframes blink-anim {
+                    0%, 100% { opacity: 1; filter: drop-shadow(0 0 5px #FF0000); }
+                    50% { opacity: 0.3; filter: none; }
+                }
+
                 /* Progress Rings Setup */
                 .ring-bg { fill: none; stroke: rgba(255, 255, 255, 0.1); stroke-width: 6; }
                 .ring {
@@ -108,8 +120,9 @@ export function generateLeetCodeSvg(stats) {
 
         <!-- Header -->
         <text x="40" y="50" class="cyan title">LEETCODE_SYSTEM::STATS</text>
-        <line x1="40" y1="65" x2="350" y2="65" stroke="#00F5FF" stroke-width="2" opacity="0.5"/>
-        <line x1="330" y1="65" x2="350" y2="45" stroke="#00F5FF" stroke-width="2" opacity="0.5"/>
+        <text x="420" y="47" class="red blink" style="font-size: 18px; font-weight: bold; letter-spacing: 2px;">🔴 ${config.leetcode.username}.LIVE</text>
+        <line x1="40" y1="65" x2="760" y2="65" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
+        <line x1="720" y1="65" x2="760" y2="45" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
         
         <!-- Main: Total Solved -->
         <g transform="translate(40, 160)">
@@ -155,7 +168,6 @@ export function generateLeetCodeSvg(stats) {
         </g>
         
         <!-- Boot Text Decor -->
-        <text x="40" y="430" class="dim" style="font-size: 10px;">> sys_ready: true</text>
         <text x="700" y="430" class="dim" style="font-size: 10px;">v1.0</text>
     </svg>`;
 }
