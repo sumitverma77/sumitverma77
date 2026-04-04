@@ -42,16 +42,16 @@ jobs:
           END_TIME=$(date +%s%3N)
           echo "Execution time: $((END_TIME - START_TIME))ms"
 
-      - name: 💾 Commit & push if README changed
+      - name: 💾 Commit & push if changes exist
         run: |
           git config user.name "readme-bot[bot]"
           git config user.email "readme-bot@users.noreply.github.com"
-          # Safe commit pattern: only push if there is an actual diff
-          if git diff --quiet README.md; then
-            echo "✅ No changes detected — README is already up-to-date."
+          # Safe commit pattern: only push if there are actual diffs or untracked files
+          git add README.md leetcode-stats.svg || true
+          if git diff --staged --quiet; then
+            echo "✅ No changes detected — Assets are already up-to-date."
           else
-            git add README.md
-            git commit -m "chore(readme): auto-update GitHub stats [skip ci]"
+            git commit -m "chore(readme): auto-update GitHub stats & LeetCode Cyberpunk SVG [skip ci]"
             git push
-            echo "✅ README.md updated and pushed successfully."
+            echo "✅ README.md and/or SVG updated and pushed successfully."
           fi
