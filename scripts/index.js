@@ -22,6 +22,9 @@ import { getInsights } from './services/insightsService.js';
 import { getLeetCodeStats } from './services/leetcodeService.js';
 import { formatStatsBlock } from './utils/formatter.js';
 import { updateReadme } from './generators/readmeGenerator.js';
+import { generateLeetCodeSvg } from './generators/svgGenerator.js';
+import { writeFile } from 'fs/promises';
+import { resolve } from 'path';
 
 async function main() {
     const totalTimer = logger.time('Total execution');
@@ -72,9 +75,21 @@ async function main() {
 
     phase2Timer.end();
 
-    // ── Phase 3: Generate README ─────────────────────────────────────────────────
-    logger.info('[Phase 3] Updating README.md...');
-    const phase3Timer = logger.time('Phase 3 — README Generation');
+    // ── Phase 3: Assets & README Generation ──────────────────────────────────────
+    logger.info('[Phase 3] Generating Assets and README.md...');
+    const phase3Timer = logger.time('Phase 3 — Output Generation');
+
+    // Generate Cyberpunk SVG if LeetCode data is available
+    if (leetcodeStats) {
+        try {
+            const svgContent = generateLeetCodeSvg(leetcodeStats);
+            const svgPath = resolve('leetcode-stats.svg');
+            await writeFile(svgPath, svgContent, 'utf-8');
+            logger.info(`✨ Generated cyberpunk SVG: leetcode-stats.svg`);
+        } catch (err) {
+            logger.error(`Failed to write leetcode-stats.svg: ${err.message}`);
+        }
+    }
 
     const wasUpdated = await updateReadme(statsBlock);
 

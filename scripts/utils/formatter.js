@@ -130,16 +130,15 @@ export function formatInsights(insights) {
 export function formatLeetCode(stats) {
     if (!stats) return '> ⚠️ _LeetCode data temporarily unavailable._';
 
-    const totalBar = progressBar((stats.totalSolved / 3000) * 100); // approx 3000 total problems
     return `
-| Metric | Detail | Info |
-|--------|--------|------|
-| 🎯 **Total Solved** | **${stats.totalSolved}** | \`${totalBar}\` |
-| 🟢 Easy | ${stats.easySolved} | — |
-| 🟡 Medium | ${stats.mediumSolved} | — |
-| 🔴 Hard | ${stats.hardSolved} | — |
-| 🏆 Contest Rating | **${stats.rating || 'N/A'}** | Global Rank: ${stats.globalRanking || 'N/A'} |
-| 📆 Contests Attended| **${stats.contestsAttended}** | — |
+<details>
+  <summary><b>🏆 View My Cyberpunk LeetCode Stats</b></summary>
+  
+  <br/>
+  <p align="center">
+    <img src="leetcode-stats.svg" alt="LeetCode Cyberpunk Card" width="800" />
+  </p>
+</details>
 `.trim();
 }
 
