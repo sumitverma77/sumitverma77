@@ -244,8 +244,12 @@ export function generateGithubSvg(stats) {
                 }
                 
                 @keyframes blink-anim {
-                    0%, 100% { opacity: 1; filter: drop-shadow(0 0 5px #00FF66); fill: #00FF66;}
-                    50% { opacity: 0.3; filter: none; }
+                    0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px #FF0000); fill: #FF0000;}
+                    50% { opacity: 0.25; filter: none; }
+                }
+                .live-text {
+                    fill: #FF0000;
+                    filter: drop-shadow(0 0 4px rgba(255,0,0,0.7));
                 }
             </style>
 
@@ -264,9 +268,9 @@ export function generateGithubSvg(stats) {
         <line x1="330" y1="65" x2="350" y2="45" stroke="#00FF66" stroke-width="2" opacity="0.5"/>
         
         <!-- LIVE indicator -->
-        <g transform="translate(560, 45)">
+        <g transform="translate(530, 45)">
             <circle cx="0" cy="-5" r="4" class="blink"/>
-            <text x="12" y="0" class="green" style="font-size: 16px; font-weight: bold; letter-spacing: 2px;">${config.leetcode.username}.LIVE</text>
+            <text x="12" y="0" class="live-text" style="font-size: 16px; font-weight: bold; letter-spacing: 2px;">sumitverma77.LIVE</text>
         </g>
         
         <!-- Main: Total Contributions -->
