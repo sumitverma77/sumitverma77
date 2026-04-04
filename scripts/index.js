@@ -1,8 +1,8 @@
 /**
- * Main Orchestrator — Entry Point
+ * Main Orchestrator — Entry Point (NeonPanda v2)
  *
  * Pipeline:
- *   Config Validation → Parallel Data Collection → Aggregate → Format → Generate README
+ *   Config Validation → Parallel Data Collection → Generate SVGs → Update README
  *
  * Design:
  *   - All service calls run in parallel via Promise.all (performance)
@@ -14,15 +14,13 @@
 import config from './config/config.js';
 import logger from './utils/logger.js';
 
-import { getTotalRepoCount, getRecentRepos } from './services/repoService.js';
-import { getTotalCommits, getTotalContributions } from './services/commitService.js';
+import { getTotalRepoCount } from './services/repoService.js';
+import { getTotalCommits, getGithubStats } from './services/commitService.js';
 import { getTopLanguages } from './services/languageService.js';
-import { getLatestActivity } from './services/activityService.js';
-import { getInsights } from './services/insightsService.js';
 import { getLeetCodeStats } from './services/leetcodeService.js';
 import { formatStatsBlock } from './utils/formatter.js';
 import { updateReadme } from './generators/readmeGenerator.js';
-import { generateLeetCodeSvg } from './generators/svgGenerator.js';
+import { generateLeetCodeSvg, generateGithubSvg } from './generators/svgGenerator.js';
 import { writeFile } from 'fs/promises';
 import { resolve } from 'path';
 
@@ -35,18 +33,15 @@ async function main() {
     logger.info('═══════════════════════════════════════════════');
 
     // ── Phase 1: Fetch all data in parallel ─────────────────────────────────────
-    logger.info('[Phase 1] Fetching GitHub data (parallel)...');
+    logger.info('[Phase 1] Fetching data (parallel)...');
     const phase1Timer = logger.time('Phase 1 — Data Collection');
 
-    const [totalRepos, totalCommits, totalContributions, recentRepos, languages, activity, insights, leetcodeStats] =
+    const [totalRepos, totalCommits, githubStats, languages, leetcodeStats] =
         await Promise.all([
             getTotalRepoCount().catch((e) => { logger.error('repoCount failed', { error: e.message }); return 0; }),
             getTotalCommits().catch((e) => { logger.error('totalCommits failed', { error: e.message }); return 0; }),
-            getTotalContributions().catch((e) => { logger.error('totalContributions failed', { error: e.message }); return 0; }),
-            getRecentRepos().catch((e) => { logger.error('recentRepos failed', { error: e.message }); return []; }),
+            getGithubStats().catch((e) => { logger.error('githubStats failed', { error: e.message }); return { totalContributions: 0, currentStreak: 0, longestStreak: 0 }; }),
             getTopLanguages().catch((e) => { logger.error('languages failed', { error: e.message }); return []; }),
-            getLatestActivity().catch((e) => { logger.error('activity failed', { error: e.message }); return null; }),
-            getInsights().catch((e) => { logger.error('insights failed', { error: e.message }); return null; }),
             getLeetCodeStats().catch((e) => { logger.error('leetcodeStats failed', { error: e.message }); return null; }),
         ]);
 
@@ -55,11 +50,10 @@ async function main() {
     logger.summary('Data Collection', {
         totalRepos,
         totalCommits,
-        totalContributions,
-        recentReposCount: recentRepos.length,
+        totalContributions: githubStats.totalContributions,
+        currentStreak: githubStats.currentStreak,
+        longestStreak: githubStats.longestStreak,
         topLanguage: languages[0]?.language ?? 'N/A',
-        latestActivity: activity?.repo ?? 'none',
-        insightsAvailable: insights !== null,
         leetcodeAvailable: leetcodeStats !== null,
     });
 
@@ -68,27 +62,38 @@ async function main() {
     const phase2Timer = logger.time('Phase 2 — Formatting');
 
     const updatedAt = new Date().toISOString();
-    const statsBlock = formatStatsBlock(
-        { totalRepos, totalCommits, totalContributions, recentRepos, languages, activity, insights, leetcodeStats },
-        updatedAt
-    );
+    const statsBlock = formatStatsBlock({ totalRepos, totalCommits, githubStats }, updatedAt);
 
     phase2Timer.end();
 
     // ── Phase 3: Assets & README Generation ──────────────────────────────────────
-    logger.info('[Phase 3] Generating Assets and README.md...');
+    logger.info('[Phase 3] Generating SVG Assets and updating README.md...');
     const phase3Timer = logger.time('Phase 3 — Output Generation');
 
-    // Generate Cyberpunk SVG if LeetCode data is available
+    // Generate LeetCode Cyberpunk SVG
     if (leetcodeStats) {
         try {
             const svgContent = generateLeetCodeSvg(leetcodeStats);
-            const svgPath = resolve('leetcode-stats.svg');
-            await writeFile(svgPath, svgContent, 'utf-8');
-            logger.info(`✨ Generated cyberpunk SVG: leetcode-stats.svg`);
+            await writeFile(resolve('leetcode-stats.svg'), svgContent, 'utf-8');
+            logger.info(`✨ Generated: leetcode-stats.svg`);
         } catch (err) {
             logger.error(`Failed to write leetcode-stats.svg: ${err.message}`);
         }
+    }
+
+    // Generate GitHub Cyberpunk SVG
+    try {
+        const topLanguage = languages[0]?.language || 'N/A';
+        const ghSvgContent = generateGithubSvg({
+            totalContributions: githubStats.totalContributions,
+            currentStreak: githubStats.currentStreak,
+            longestStreak: githubStats.longestStreak,
+            topLanguage,
+        });
+        await writeFile(resolve('github-stats.svg'), ghSvgContent, 'utf-8');
+        logger.info(`✨ Generated: github-stats.svg`);
+    } catch (err) {
+        logger.error(`Failed to write github-stats.svg: ${err.message}`);
     }
 
     const wasUpdated = await updateReadme(statsBlock);

@@ -166,19 +166,23 @@
 - 🎮 Favorite pastime: Code + Coffee + Lo-fi -->
 
 ---
-## 🌍 Connect With Me
 
-<p align="center" style="text-decoration:none;">
-  <a href="https://linkedin.com/in/sumit-verma-" target="_blank" style="text-decoration:none;">
-    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn"/>
+<p align="center">
+  <a href="https://linkedin.com/in/sumit-verma-" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
-  <a href="mailto:987sumitverma@gmail.com" style="text-decoration:none;">
-    <img src="https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white" alt ="Email" />
+  &nbsp;&nbsp;
+  <a href="mailto:987sumitverma@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-Drop%20a%20Mail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/sumitverma77">
+    <img src="https://img.shields.io/badge/GitHub-Follow-171515?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+</p>
 
-  <a href="https://github.com/sumitverma77" style="text-decoration:none;">
-    <img src="https://img.shields.io/badge/GitHub-171515?logo=github&logoColor=white" alt="GitHub" />
-  </a>
+<p align="center">
+  <sub>⚡ <i>"Automate it before it annoys you."</i> &nbsp;—&nbsp; NeonPanda</sub>
 </p>
 
 

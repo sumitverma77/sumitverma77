@@ -107,26 +107,32 @@ export async function getTotalCommits() {
 }
 
 /**
- * Compute total contributions over the last year using GitHub GraphQL.
+ * Compute total contributions and streak data over the last year using GitHub GraphQL.
  * 
- * @returns {Promise<number>}
+ * @returns {Promise<{totalContributions: number, currentStreak: number, longestStreak: number}>}
  */
-export async function getTotalContributions() {
+export async function getGithubStats() {
     const { graphql } = await import('../clients/githubClient.js');
     
-    const cacheKey = `contributions:total:${github.username}`;
+    const cacheKey = `github:stats:${github.username}`;
     if (cache.has(cacheKey)) {
-        logger.debug('Cache hit: total contributions');
+        logger.debug('Cache hit: github stats');
         return cache.get(cacheKey);
     }
 
-    const timer = logger.time('Computing total contributions (GraphQL)');
+    const timer = logger.time('Computing GitHub Stats (GraphQL)');
     const query = `
         query($username: String!) {
             user(login: $username) {
                 contributionsCollection {
                     contributionCalendar {
                         totalContributions
+                        weeks {
+                            contributionDays {
+                                contributionCount
+                                date
+                            }
+                        }
                     }
                 }
             }
@@ -135,15 +141,60 @@ export async function getTotalContributions() {
 
     try {
         const data = await graphql(query, { username: github.username });
-        const total = data?.user?.contributionsCollection?.contributionCalendar?.totalContributions || 0;
+        const calendar = data?.user?.contributionsCollection?.contributionCalendar;
+        
+        if (!calendar) throw new Error('No calendar data');
+
+        const totalContributions = calendar.totalContributions || 0;
+        
+        let currentStreak = 0;
+        let longestStreak = 0;
+        let currentRun = 0;
+        
+        // Flatten days
+        const days = calendar.weeks.flatMap(w => w.contributionDays);
+        
+        // Find today (or the last day in the calendar)
+        const todayStr = new Date().toISOString().split('T')[0];
+        let hitToday = false;
+
+        // Iterate forward to calculate longest streak
+        for (const day of days) {
+            if (day.contributionCount > 0) {
+                currentRun++;
+                longestStreak = Math.max(longestStreak, currentRun);
+            } else {
+                currentRun = 0;
+            }
+        }
+
+        // Calculate current streak by looking backwards from today (the last element)
+        let backRun = 0;
+        for (let i = days.length - 1; i >= 0; i--) {
+            if (days[i].contributionCount > 0) {
+                backRun++;
+            } else {
+                // If today has 0, we check yesterday. If yesterday is 0, streak is 0.
+                if (i === days.length - 1) {
+                    continue; // Skip today being 0 and see if yesterday had a streak
+                } else if (i === days.length - 2 && backRun === 0 && days[days.length-1].contributionCount === 0) {
+                   break;
+                } else {
+                    break;
+                }
+            }
+        }
+        currentStreak = backRun;
+        
+        const result = { totalContributions, currentStreak, longestStreak };
         
         timer.end();
-        logger.info(`[COMMIT_SERVICE] Total contributions calculated (count=${total})`);
+        logger.info(`[COMMIT_SERVICE] GitHub Stats calculated: Total=${totalContributions}, Streak=${currentStreak}, Longest=${longestStreak}`);
         
-        cache.set(cacheKey, total, cacheConfig.ttlMs);
-        return total;
+        cache.set(cacheKey, result, cacheConfig.ttlMs);
+        return result;
     } catch (err) {
-        logger.error(`[COMMIT_SERVICE] Failed to fetch total contributions: ${err.message}`);
-        return 0;
+        logger.error(`[COMMIT_SERVICE] Failed to fetch GitHub stats: ${err.message}`);
+        return { totalContributions: 0, currentStreak: 0, longestStreak: 0 };
     }
 }
