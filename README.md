@@ -67,6 +67,9 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&height=250&text=Hey!%20I'm%20Sumit%20Verma%20&fontAlignY=40&fontColor=ffffff&color=0:00F5FF,100:ff00ff&desc=Backend%20Engineer%20|%20Automation%20Geek%20|%20ICPC%20Regionalist&descAlignY=60" />
 </p> -->
 
+<details>
+<summary><h2 style="display:inline-block">👋 Hey, I'm Sumit Verma — Intro & Expertise</h2></summary>
+
 <!-- 💬 Typing Intro Animation -->
 <h1 align="center" style="color:#00FFFF;">
   Hey 👋 I'm Sumit Verma
@@ -80,20 +83,9 @@
   <sub>⚡ This README is auto-generated using a custom GitHub automation system built with <strong>Node.js</strong>, clean architecture, and scheduled CI workflows.</sub>
 </p>
 
-
-
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=3" width="60%"/>
 </p>
-
-<!-- ---
-
-## 🧠 About Me
-
-👨‍💻 **Backend Engineer** passionate about **scalable systems**, **automation**, and **developer experience**.  
-🚀 Working primarily with **Java**, **Spring Boot**,and **AWS**.  
-🎯 Motto: *Automate Everything. Measure Performance. Refactor Constantly.* -->
-
 
 ---
 
@@ -104,45 +96,12 @@
 | Backend Development | Java, Spring Boot, REST, Microservices, Kafka |
 | Cloud & DevOps | AWS, Docker, GitHub Actions, CI/CD |
 | Languages | C, C++, Java, Sql |
-| Testing | JUnit, Mockito
+| Testing | JUnit, Mockito |
 | Architecture & Design | SOLID, Clean Code, Scalable Design |
 | Database | Mysql, Postgresql, MongoDB, DynamoDB, Redis, ElasticSearch |
 | Problem Solving | ICPC Regionalist'2024 |
 
-<!-- --- -->
-
-<!-- ## ⚙️ Tech Arsenal
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,go,c,cpp,aws,docker,git,github,mysql,postgres,redis,mongodb,dynamodb,elasticsearch,kafka,maven,vscode,idea,postman" />
-</p> -->
-
-<!-- ---
-
-## 🚀 Featured Projects
-
-| 🪄 Project | 🌟 Description | 💻 Tech Stack |
-|------------|----------------|----------------|
-| **fin-ping-service** | Intelligent bank status checker to reduce waste fetch from Account Aggrigator | Java • AWS • Polling Logic |
-| **agri-weather-alert** | Weather alerts for farmers via SMS/Voice in native languages | Spring Boot • Twilio • Cron |
-| **applynow-backend** | Job platform with authentication & workflows | Spring Boot • REST • JWT |
-| **cloud-ready-springboot** | Fully containerized backend with CI/CD to AWS | Docker • AWS • GitHub Actions |
-<!-- | **contact-management-system** | CRUD + Prefix search (Trie-based) | Java • Spring • Trie Algorithm | 
-
-🔗 Explore more at → [github.com/sumitverma77?tab=repositories](https://github.com/sumitverma77?tab=repositories) -->
-
-<!-- ---
-
-## 📊 My Developer Dashboard
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sumitverma77&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000&rank_icon=github" height="150"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=sumitverma77&theme=tokyonight&hide_border=true" height="150"/>
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=sumitverma77&bg_color=0D1117&color=00F5FF&line=00FFFF&point=FFFFFF&hide_border=true" alt="Activity Graph" />
-</p> -->
+</details>
 
 ---
 

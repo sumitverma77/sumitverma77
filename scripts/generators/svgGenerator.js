@@ -120,9 +120,14 @@ export function generateLeetCodeSvg(stats) {
 
         <!-- Header -->
         <text x="40" y="50" class="cyan title">LEETCODE_SYSTEM::STATS</text>
-        <text x="420" y="47" class="red blink" style="font-size: 18px; font-weight: bold; letter-spacing: 2px;">🔴 ${config.leetcode.username}.LIVE</text>
-        <line x1="40" y1="65" x2="760" y2="65" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
-        <line x1="720" y1="65" x2="760" y2="45" stroke="#00F5FF" stroke-width="2" opacity="0.3"/>
+        <line x1="40" y1="65" x2="350" y2="65" stroke="#00F5FF" stroke-width="2" opacity="0.5"/>
+        <line x1="330" y1="65" x2="350" y2="45" stroke="#00F5FF" stroke-width="2" opacity="0.5"/>
+        
+        <!-- LIVE indicator -->
+        <g transform="translate(560, 45)">
+            <circle cx="0" cy="-5" r="4" fill="#FF0000" class="blink"/>
+            <text x="12" y="0" class="red" style="font-size: 16px; font-weight: bold; letter-spacing: 2px;">${config.leetcode.username}.LIVE</text>
+        </g>
         
         <!-- Main: Total Solved -->
         <g transform="translate(40, 160)">
