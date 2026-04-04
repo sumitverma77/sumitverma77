@@ -144,4 +144,35 @@ export async function getAll(url) {
     return results;
 }
 
-export default { get, getRaw, getAll };
+/**
+ * Execute a GraphQL query against GitHub's API.
+ * @param {string} query
+ * @param {Object} variables
+ * @returns {Promise<any>}
+ */
+export async function graphql(query, variables = {}) {
+    const url = 'https://api.github.com/graphql';
+    logger.debug(`[GITHUB] POST ${url}`);
+    
+    // We must use node-fetch directly here to do a POST, 
+    // or add a method param to fetchWithRetry. For simplicity:
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: buildHeaders(),
+        body: JSON.stringify({ query, variables })
+    });
+
+    if (!response.ok) {
+        const body = await response.text();
+        throw new Error(`GitHub GraphQL API error [${response.status}]: ${body}`);
+    }
+
+    const { data, errors } = await response.json();
+    if (errors && errors.length > 0) {
+        throw new Error(`GitHub GraphQL error: ${errors[0].message}`);
+    }
+
+    return data;
+}
+
+export default { get, getRaw, getAll, graphql };
