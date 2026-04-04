@@ -1,142 +1,12 @@
 /**
- * Formatter Utility — Pure Markdown Formatters (v2)
+ * Formatter Utility — Cyberpunk SVG-only output (v3)
  *
- * v2 changes:
- *   - formatLanguages() now uses repoCount (not bytes) — matches languageService v2
- *   - Label updated: "Primary Language (by repo usage)"
- *   - Language bars show "(N repos)" instead of a percentage share
- *   - All failure fallbacks preserved
- *   - formatInsights() and formatStatsBlock() updated for new language shape
+ * v3: All legacy markdown table formatters removed.
+ *     Output is purely two <details open> blocks embedding
+ *     github-stats.svg and leetcode-stats.svg.
  */
-
-// ── Visual helpers ────────────────────────────────────────────────────────────
-
-function progressBar(pct, width = 20) {
-    const filled = Math.round((Math.min(100, Math.max(0, pct)) / 100) * width);
-    return '█'.repeat(filled) + '░'.repeat(width - filled);
-}
-
-function timeAgo(isoDate) {
-    if (!isoDate) return 'unknown';
-    const diff = Date.now() - new Date(isoDate).getTime();
-    const days = Math.floor(diff / 86400000);
-    if (days === 0) return 'today';
-    if (days === 1) return '1 day ago';
-    if (days < 30) return `${days} days ago`;
-    const months = Math.floor(days / 30);
-    if (months === 1) return '1 month ago';
-    if (months < 12) return `${months} months ago`;
-    return `${Math.floor(months / 12)}y ago`;
-}
 
 // ── Section formatters ────────────────────────────────────────────────────────
-
-/**
- * Format top languages by REPO COUNT (not bytes).
- * Each entry: { language, repoCount, percentage }
- *
- * Output example:
- *   | Java   | ████████████████░░░░ | 10 repos | 53.3% |
- */
-export function formatLanguages(langs) {
-    if (!langs || langs.length === 0) {
-        return '> ⚠️ _Language data temporarily unavailable._';
-    }
-
-    const rows = langs.map(({ language, repoCount, percentage }) => {
-        const bar = progressBar(parseFloat(percentage));
-        const repoLabel = repoCount === 1 ? '1 repo' : `${repoCount} repos`;
-        return `| ${language.padEnd(20)} | \`${bar}\` | ${repoLabel.padStart(8)} | ${String(percentage).padStart(5)}% |`;
-    });
-
-    return [
-        '| Language             | Usage                        |    Repos | Share   |',
-        '|----------------------|------------------------------|----------|---------|',
-        ...rows,
-    ].join('\n');
-}
-
-/**
- * Format recent repos as a Markdown table.
- */
-export function formatRecentRepos(repos) {
-    if (!repos || repos.length === 0) {
-        return '> ⚠️ _Repository data temporarily unavailable._';
-    }
-
-    const rows = repos.map(({ name, url, description, language, stars, pushedAt }) => {
-        const desc = description.length > 48 ? description.substring(0, 45) + '...' : description;
-        return `| [${name}](${url}) | ${desc} | ${language ?? 'N/A'} | ⭐ ${stars} | ${timeAgo(pushedAt)} |`;
-    });
-
-    return [
-        '| Repository | Description | Language | Stars | Last Push |',
-        '|------------|-------------|----------|-------|-----------|',
-        ...rows,
-    ].join('\n');
-}
-
-/**
- * Format the latest activity line.
- */
-export function formatActivity(activity) {
-    if (!activity) return '> ⚠️ _Activity data temporarily unavailable._';
-    const msg = activity.message.split('\n')[0].substring(0, 100);
-    return [
-        `> 🔨 **[${activity.repo}](${activity.repoUrl})** · \`${activity.branch}\` · ${timeAgo(activity.timestamp)}`,
-        `> `,
-        `> _"${msg}"_`,
-    ].join('\n');
-}
-
-/**
- * Format the Insights Engine section.
- */
-export function formatInsights(insights) {
-    if (!insights) return '> ⚠️ _Insights data temporarily unavailable._';
-
-    const { mostActiveRepo, commitFrequency, weeklyActivity } = insights;
-
-    const rows = [];
-
-    if (mostActiveRepo) {
-        rows.push(
-            `| 🏆 Most Active Repo | **[${mostActiveRepo.name}](${mostActiveRepo.url})** | ${mostActiveRepo.language} | ⭐ ${mostActiveRepo.stars} |`
-        );
-    }
-    if (commitFrequency) {
-        rows.push(
-            `| 📈 Commit Frequency | **${commitFrequency.commitsLast4Weeks}** commits in last 4 weeks | ~${commitFrequency.perWeek}/week | — |`
-        );
-    }
-    if (weeklyActivity?.busiestDay && weeklyActivity.busiestDay !== 'N/A') {
-        rows.push(
-            `| 📅 Most Active Day  | **${weeklyActivity.busiestDay}** | — | — |`
-        );
-    }
-
-    if (rows.length === 0) return '> ⚠️ _Insights data temporarily unavailable._';
-
-    return [
-        '| Insight | Detail | Info | Extra |',
-        '|---------|--------|------|-------|',
-        ...rows,
-    ].join('\n');
-}
-
-/**
- * Format LeetCode Stats section
- */
-export function formatLeetCode(stats) {
-    if (!stats) return '> ⚠️ _LeetCode data temporarily unavailable._';
-
-    return `
-  <br/>
-  <p align="center">
-    <img src="leetcode-stats.svg" alt="LeetCode Cyberpunk Card" width="800" />
-  </p>
-`.trim();
-}
 
 /**
  * Compose the complete stats block injected into README between marker comments.
@@ -144,69 +14,25 @@ export function formatLeetCode(stats) {
  * @param {string} updatedAt - ISO timestamp
  */
 export function formatStatsBlock(data, updatedAt) {
-    const { totalRepos, totalCommits, totalContributions, recentRepos, languages, activity, insights, leetcodeStats } = data;
-
-    // Primary language = most frequent language by repo count
-    const primaryLanguage = languages?.[0]?.language ?? 'N/A';
-
     return `
-<details>
-  <summary><h2>📊 GitHub Stats — Auto-Updated</h2></summary>
+<details open>
+  <summary><h2>📊 GitHub Cyberpunk Stats</h2></summary>
 
-> ⚡ *Auto-generated by a custom Node.js system using GitHub REST API, clean architecture, and scheduled CI/CD.*
-
-| Metric | Value |
-|--------|-------|
-| 📁 Public Repositories | **${totalRepos}** |
-| 🌟 Total Contributions | **${totalContributions.toLocaleString()}** (Last Year) |
-| 💾 Total Commits (All time) | **${totalCommits.toLocaleString()}** |
-| 🧠 Primary Language (by repo usage) | **${primaryLanguage}** |
-
+  <br/>
+  <p align="center">
+    <img src="github-stats.svg" alt="GitHub Cyberpunk Card" style="width: 100%; max-width: 800px;" />
+  </p>
 </details>
 
 ---
 
-<details>
-  <summary><h3>🗂️ Recent Repositories</h3></summary>
+<details open>
+  <summary><h2>🏆 LeetCode Cyberpunk Stats</h2></summary>
 
-${formatRecentRepos(recentRepos)}
-
-</details>
-
----
-
-<details>
-  <summary><h3>🌐 Top Languages (by repo count)</h3></summary>
-
-${formatLanguages(languages)}
-
-</details>
-
----
-
-<details>
-  <summary><h3>⚡ Latest Activity</h3></summary>
-
-${formatActivity(activity)}
-
-</details>
-
----
-
-<details>
-  <summary><h3>🔥 Insights Engine</h3></summary>
-
-${formatInsights(insights)}
-
-</details>
-
----
-
-<details>
-  <summary><h3>🏆 LeetCode Stats</h3></summary>
-
-${formatLeetCode(leetcodeStats)}
-
+  <br/>
+  <p align="center">
+    <img src="leetcode-stats.svg" alt="LeetCode Cyberpunk Card" style="width: 100%; max-width: 800px;" />
+  </p>
 </details>
 
 ---
