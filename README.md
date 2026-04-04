@@ -155,8 +155,8 @@
 | Metric | Value |
 |--------|-------|
 | 📁 Public Repositories | **24** |
-| 🌟 Total Contributions | **893** (Last Year) |
-| 💾 Total Commits (All time) | **343** |
+| 🌟 Total Contributions | **896** (Last Year) |
+| 💾 Total Commits (All time) | **345** |
 | 🧠 Primary Language (by repo usage) | **Java** |
 
 ---
@@ -197,25 +197,25 @@
 | Insight | Detail | Info | Extra |
 |---------|--------|------|-------|
 | 🏆 Most Active Repo | **[sumitverma77](https://github.com/sumitverma77/sumitverma77)** | JavaScript | ⭐ 0 |
-| 📈 Commit Frequency | **23** commits in last 4 weeks | ~5.8/week | — |
+| 📈 Commit Frequency | **25** commits in last 4 weeks | ~6.3/week | — |
 | 📅 Most Active Day  | **Friday** | — | — |
 
 ---
 
 ### 🏆 LeetCode Stats
 
-| Metric | Detail | Info |
-|--------|--------|------|
-| 🎯 **Total Solved** | **1034** | `███████░░░░░░░░░░░░░` |
-| 🟢 Easy | 372 | — |
-| 🟡 Medium | 598 | — |
-| 🔴 Hard | 64 | — |
-| 🏆 Contest Rating | **1798** | Global Rank: 65883 |
-| 📆 Contests Attended| **78** | — |
+<details>
+  <summary><b>🏆 View My Cyberpunk LeetCode Stats</b></summary>
+  
+  <br/>
+  <p align="center">
+    <img src="leetcode-stats.svg" alt="LeetCode Cyberpunk Card" width="800" />
+  </p>
+</details>
 
 ---
 
-<sub>🤖 Auto-updated by <a href=".github/workflows/update-readme.yml">readme-bot</a> · Sat, 04 Apr 2026 12:40:02 GMT</sub>
+<sub>🤖 Auto-updated by <a href=".github/workflows/update-readme.yml">readme-bot</a> · Sat, 04 Apr 2026 13:49:12 GMT</sub>
 
 <!-- GITHUB_STATS:END -->
 
