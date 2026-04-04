@@ -89,6 +89,15 @@
         <img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=black"/>
       </td>
     </tr>
+    <tr>
+      <td><b>🤖 AI / LLM Tools</b></td>
+      <td>
+        <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white"/>
+        <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Prompt_Engineering-6B21A8?style=flat-square"/>
+        <img src="https://img.shields.io/badge/RAG-00897B?style=flat-square"/>
+      </td>
+    </tr>
   </tbody>
 </table>
 </div>
@@ -127,20 +136,9 @@
 
 ---
 
-<p align="center">
-  <a href="https://linkedin.com/in/sumit-verma-" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-  &nbsp;&nbsp;
-  <a href="mailto:987sumitverma@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-Drop%20a%20Mail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/sumitverma77">
-    <img src="https://img.shields.io/badge/GitHub-Follow-171515?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-</p>
-
-<p align="center">
-  <sub>⚡ <i>"Automate it before it annoys you."</i> &nbsp;—&nbsp; NeonPanda</sub>
+<p align="center" style="gap: 12px;">
+  <a href="https://linkedin.com/in/sumit-verma-"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+  <a href="mailto:987sumitverma@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" alt="Email"/></a>
+  <a href="https://github.com/sumitverma77"><img src="https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white" alt="GitHub"/></a>
+  <a href="https://x.com/sumit_verma_77"><img src="https://img.shields.io/badge/X-000000?style=flat&logo=x&logoColor=white" alt="X (Twitter)"/></a>
 </p>
