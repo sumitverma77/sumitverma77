@@ -1,76 +1,8 @@
-<!-- 
-
-### 🧠 ABOUT ME  
-💻 Building **scalable backends** and **automating everything**.  
-☁️ Working with **Java • Spring Boot • Docker • AWS**.  
-🧩 ICPC Regionalist | Cloud-native Dev | DevOps Enthusiast.  
-🎯 Motto: *"Automate it before it annoys you."*
-
---- -->
-
-<!-- ### ⚙️ TECH STACK  
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,aws,docker,githubactions,redis,postgres,python,mysql,cpp,c,git,mongodb,dynamodb,github" />
-</p> -->
-
-<!-- ---
-
-### 💡 FEATURED PROJECTS
-| 🚀 Project | 💬 Description | 🧰 Stack |
-|-------------|----------------|-----------|
-| **fin-ping-service** | Smart bank request optimizer | Java • REST • Polling |
-| **applynow-backend** | Authenticated Job Platform | Spring Boot • JWT |
-| **cloud-ready-springboot** | CI/CD to AWS | Docker • Actions • AWS |
-
-🔗 Explore more: [github.com/sumitverma77](https://github.com/sumitverma77)
-
---- -->
-
-<!-- ### 📊 DEV ANALYTICS
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sumitverma77&show_icons=true&theme=radical&bg_color=000000&hide_border=true" height="150"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=sumitverma77&theme=radical&hide_border=true" height="150"/>
-</p> -->
-
-<!-- ---
-
-### 🏆 HIGHLIGHTS  
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=sumitverma77&theme=matrix&no-frame=true&no-bg=true" />
-</p> -->
-
-<!-- 
----
-
-### 🐍 CODE FLOW
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" />
-</p> -->
-<!-- 
-
-
----
-
-> 💬 *“Simplicity in architecture, elegance in logic, automation in execution.”* -->
-
-<!-- <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer&text=Stay+Curious,+Keep+Shipping!+💙&fontSize=20" />
-</p> -->
-
-<!-- 
-![Box SVG](https://raw.githubusercontent.com/sumitverma77/sumitverma77/main/box.svg) -->
-<!-- 💫 ULTIMATE GITHUB PROFILE README: Sumit Verma (sumitverma77) -->
-<!-- Showcasing all modern styles, animations, dynamic stats, themes, and creativity -->
-
-<!-- 🌈 Animated Wave Header -->
-<!-- <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&height=250&text=Hey!%20I'm%20Sumit%20Verma%20&fontAlignY=40&fontColor=ffffff&color=0:00F5FF,100:ff00ff&desc=Backend%20Engineer%20|%20Automation%20Geek%20|%20ICPC%20Regionalist&descAlignY=60" />
-</p> -->
+<!-- HEADER COMMENTS (legacy blocks kept as comments for reference) -->
 
 <details>
 <summary><h2 style="display:inline-block">👋 Hey, I'm Sumit Verma — Intro & Expertise</h2></summary>
 
-<!-- 💬 Typing Intro Animation -->
 <h1 align="center" style="color:#00FFFF;">
   Hey 👋 I'm Sumit Verma
 </h1>
@@ -83,23 +15,83 @@
   <sub>⚡ This README is auto-generated using a custom GitHub automation system built with <strong>Node.js</strong>, clean architecture, and scheduled CI workflows.</sub>
 </p>
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=3" width="60%"/>
-</p>
-
 ---
 
 ## 🧩 Domains of Expertise
 
-| 🧭 Focus Area | ⚡ Technologies |
-|---------------|----------------|
-| Backend Development | Java, Spring Boot, REST, Microservices, Kafka |
-| Cloud & DevOps | AWS, Docker, GitHub Actions, CI/CD |
-| Languages | C, C++, Java, Sql |
-| Testing | JUnit, Mockito |
-| Architecture & Design | SOLID, Clean Code, Scalable Design |
-| Database | Mysql, Postgresql, MongoDB, DynamoDB, Redis, ElasticSearch |
-| Problem Solving | ICPC Regionalist'2024 |
+<div align="center">
+<table width="800">
+  <thead>
+    <tr>
+      <th align="left" width="200">🧭&nbsp; Focus Area</th>
+      <th align="left">⚡&nbsp; Technologies</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>🖥️ Backend Dev</b></td>
+      <td>
+        <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=spring&logoColor=white"/>
+        <img src="https://img.shields.io/badge/REST_API-005571?style=flat-square"/>
+        <img src="https://img.shields.io/badge/Microservices-FF6C37?style=flat-square"/>
+        <img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white"/>
+      </td>
+    </tr>
+    <tr>
+      <td><b>☁️ Cloud & DevOps</b></td>
+      <td>
+        <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
+        <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white"/>
+        <img src="https://img.shields.io/badge/CI%2FCD-0A0A0A?style=flat-square&logo=github&logoColor=white"/>
+      </td>
+    </tr>
+    <tr>
+      <td><b>💻 Languages</b></td>
+      <td>
+        <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white"/>
+        <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white"/>
+        <img src="https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white"/>
+        <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
+      </td>
+    </tr>
+    <tr>
+      <td><b>🧪 Testing</b></td>
+      <td>
+        <img src="https://img.shields.io/badge/JUnit5-25A162?style=flat-square&logo=junit5&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Mockito-78C257?style=flat-square"/>
+      </td>
+    </tr>
+    <tr>
+      <td><b>🏛️ Architecture</b></td>
+      <td>
+        <img src="https://img.shields.io/badge/SOLID-blueviolet?style=flat-square"/>
+        <img src="https://img.shields.io/badge/Clean_Code-0D1117?style=flat-square&logo=github&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Scalable_Design-00F5FF?style=flat-square"/>
+      </td>
+    </tr>
+    <tr>
+      <td><b>🗄️ Databases</b></td>
+      <td>
+        <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
+        <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white"/>
+        <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white"/>
+        <img src="https://img.shields.io/badge/DynamoDB-4053D6?style=flat-square&logo=amazondynamodb&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white"/>
+        <img src="https://img.shields.io/badge/Elasticsearch-005571?style=flat-square&logo=elasticsearch&logoColor=white"/>
+      </td>
+    </tr>
+    <tr>
+      <td><b>🏆 Problem Solving</b></td>
+      <td>
+        <img src="https://img.shields.io/badge/ICPC_Regionalist-2024-gold?style=flat-square&logo=codeforces&logoColor=white"/>
+        <img src="https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=black"/>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 </details>
 
@@ -107,63 +99,6 @@
 
 <!-- GITHUB_STATS:START -->
 <!-- GITHUB_STATS:END -->
-
-
-
-
-
-<!-- 
-## 🔥 Achievements & Highlights
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=sumitverma77&theme=tokyonight&no-frame=true&no-bg=true&margin-w=15" />
-</p> -->
-
-<!-- ---
-
-##  My Devlopment Routine
-<a href="https://wakatime.com">
-  <img src="https://wakatime.com/share/@sumit_verma_77/8bd412f1-25f7-4890-849c-41d45aba6ee6.png" width="100%" />
-</a>
- -->
-
-
-<!-- ## 🐍 Watch My Code Come Alive
-
-<p align="center">
-  <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake-dark.svg" alt="snake animation" />
-</p> -->
-
-<!-- 
-## 🌈 Random Dev Quote
-
-<p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
-</p> -->
-
-<!-- ---
-
-## 🧬 Dynamic Badges of Power
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Java-Master-orange?style=for-the-badge&logo=openjdk" />
-  <img src="https://img.shields.io/badge/SpringBoot-Architect-green?style=for-the-badge&logo=spring" />
-  <img src="https://img.shields.io/badge/AWS-Cloud%20Engineer-yellow?style=for-the-badge&logo=amazonaws" />
-  <img src="https://img.shields.io/badge/CI/CD-Automator-blueviolet?style=for-the-badge&logo=githubactions" />
-  <img src="https://img.shields.io/badge/Open%20Source-Contributor-red?style=for-the-badge&logo=github" />
-</p> -->
-
-
-
-<!-- ---
-
-## 🧠 Fun Facts About Me
-
-- 🕶️ I debug faster than I cook Maggi 🍜  
-- 💡 I believe **clean code** is the best résumé  
-- 🕹️ I sometimes refactor for fun (yes, really)  
-- 🐧 Linux > Everything  
-- 🎮 Favorite pastime: Code + Coffee + Lo-fi -->
 
 ---
 
@@ -184,12 +119,3 @@
 <p align="center">
   <sub>⚡ <i>"Automate it before it annoys you."</i> &nbsp;—&nbsp; NeonPanda</sub>
 </p>
-
-
-<!-- ---
-
-> *“If it’s repetitive, automate it. If it’s complex, simplify it. If it’s perfect, make it faster.”* ⚡ -->
-
-<!-- <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer&text=Thanks+for+Visiting!+💙&fontSize=20" />
-</p> -->
