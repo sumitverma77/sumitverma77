@@ -15,10 +15,11 @@ import config from './config/config.js';
 import logger from './utils/logger.js';
 
 import { getTotalRepoCount, getRecentRepos } from './services/repoService.js';
-import { getTotalCommits } from './services/commitService.js';
+import { getTotalCommits, getTotalContributions } from './services/commitService.js';
 import { getTopLanguages } from './services/languageService.js';
 import { getLatestActivity } from './services/activityService.js';
 import { getInsights } from './services/insightsService.js';
+import { getLeetCodeStats } from './services/leetcodeService.js';
 import { formatStatsBlock } from './utils/formatter.js';
 import { updateReadme } from './generators/readmeGenerator.js';
 
@@ -34,14 +35,16 @@ async function main() {
     logger.info('[Phase 1] Fetching GitHub data (parallel)...');
     const phase1Timer = logger.time('Phase 1 — Data Collection');
 
-    const [totalRepos, totalCommits, recentRepos, languages, activity, insights] =
+    const [totalRepos, totalCommits, totalContributions, recentRepos, languages, activity, insights, leetcodeStats] =
         await Promise.all([
             getTotalRepoCount().catch((e) => { logger.error('repoCount failed', { error: e.message }); return 0; }),
             getTotalCommits().catch((e) => { logger.error('totalCommits failed', { error: e.message }); return 0; }),
+            getTotalContributions().catch((e) => { logger.error('totalContributions failed', { error: e.message }); return 0; }),
             getRecentRepos().catch((e) => { logger.error('recentRepos failed', { error: e.message }); return []; }),
             getTopLanguages().catch((e) => { logger.error('languages failed', { error: e.message }); return []; }),
             getLatestActivity().catch((e) => { logger.error('activity failed', { error: e.message }); return null; }),
             getInsights().catch((e) => { logger.error('insights failed', { error: e.message }); return null; }),
+            getLeetCodeStats().catch((e) => { logger.error('leetcodeStats failed', { error: e.message }); return null; }),
         ]);
 
     phase1Timer.end();
@@ -49,10 +52,12 @@ async function main() {
     logger.summary('Data Collection', {
         totalRepos,
         totalCommits,
+        totalContributions,
         recentReposCount: recentRepos.length,
         topLanguage: languages[0]?.language ?? 'N/A',
         latestActivity: activity?.repo ?? 'none',
         insightsAvailable: insights !== null,
+        leetcodeAvailable: leetcodeStats !== null,
     });
 
     // ── Phase 2: Format ─────────────────────────────────────────────────────────
@@ -61,7 +66,7 @@ async function main() {
 
     const updatedAt = new Date().toISOString();
     const statsBlock = formatStatsBlock(
-        { totalRepos, totalCommits, recentRepos, languages, activity, insights },
+        { totalRepos, totalCommits, totalContributions, recentRepos, languages, activity, insights, leetcodeStats },
         updatedAt
     );
 

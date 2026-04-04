@@ -125,12 +125,31 @@ export function formatInsights(insights) {
 }
 
 /**
+ * Format LeetCode Stats section
+ */
+export function formatLeetCode(stats) {
+    if (!stats) return '> ⚠️ _LeetCode data temporarily unavailable._';
+
+    const totalBar = progressBar((stats.totalSolved / 3000) * 100); // approx 3000 total problems
+    return `
+| Metric | Detail | Info |
+|--------|--------|------|
+| 🎯 **Total Solved** | **${stats.totalSolved}** | \`${totalBar}\` |
+| 🟢 Easy | ${stats.easySolved} | — |
+| 🟡 Medium | ${stats.mediumSolved} | — |
+| 🔴 Hard | ${stats.hardSolved} | — |
+| 🏆 Contest Rating | **${stats.rating || 'N/A'}** | Global Rank: ${stats.globalRanking || 'N/A'} |
+| 📆 Contests Attended| **${stats.contestsAttended}** | — |
+`.trim();
+}
+
+/**
  * Compose the complete stats block injected into README between marker comments.
- * @param {{totalRepos, totalCommits, recentRepos, languages, activity, insights}} data
+ * @param {Object} data
  * @param {string} updatedAt - ISO timestamp
  */
 export function formatStatsBlock(data, updatedAt) {
-    const { totalRepos, totalCommits, recentRepos, languages, activity, insights } = data;
+    const { totalRepos, totalCommits, totalContributions, recentRepos, languages, activity, insights, leetcodeStats } = data;
 
     // Primary language = most frequent language by repo count
     const primaryLanguage = languages?.[0]?.language ?? 'N/A';
@@ -143,7 +162,8 @@ export function formatStatsBlock(data, updatedAt) {
 | Metric | Value |
 |--------|-------|
 | 📁 Public Repositories | **${totalRepos}** |
-| 💾 Total Commits | **${totalCommits.toLocaleString()}** |
+| 🌟 Total Contributions | **${totalContributions.toLocaleString()}** (Last Year) |
+| 💾 Total Commits (All time) | **${totalCommits.toLocaleString()}** |
 | 🧠 Primary Language (by repo usage) | **${primaryLanguage}** |
 
 ---
@@ -169,6 +189,12 @@ ${formatActivity(activity)}
 ### 🔥 Insights Engine
 
 ${formatInsights(insights)}
+
+---
+
+### 🏆 LeetCode Stats
+
+${formatLeetCode(leetcodeStats)}
 
 ---
 

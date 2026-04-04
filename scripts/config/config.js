@@ -35,6 +35,9 @@ const config = {
   },
   topLanguagesCount: 6,
   recentReposCount: 5,
+  leetcode: {
+    username: optionalEnv('LEETCODE_USERNAME', 'sumit_verma_77'),
+  },
 };
 
 export default config;

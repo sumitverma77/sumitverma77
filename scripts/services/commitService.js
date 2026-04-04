@@ -105,3 +105,45 @@ export async function getTotalCommits() {
     cache.set(cacheKey, total, cacheConfig.ttlMs);
     return total;
 }
+
+/**
+ * Compute total contributions over the last year using GitHub GraphQL.
+ * 
+ * @returns {Promise<number>}
+ */
+export async function getTotalContributions() {
+    const { graphql } = await import('../clients/githubClient.js');
+    
+    const cacheKey = `contributions:total:${github.username}`;
+    if (cache.has(cacheKey)) {
+        logger.debug('Cache hit: total contributions');
+        return cache.get(cacheKey);
+    }
+
+    const timer = logger.time('Computing total contributions (GraphQL)');
+    const query = `
+        query($username: String!) {
+            user(login: $username) {
+                contributionsCollection {
+                    contributionCalendar {
+                        totalContributions
+                    }
+                }
+            }
+        }
+    `;
+
+    try {
+        const data = await graphql(query, { username: github.username });
+        const total = data?.user?.contributionsCollection?.contributionCalendar?.totalContributions || 0;
+        
+        timer.end();
+        logger.info(`[COMMIT_SERVICE] Total contributions calculated (count=${total})`);
+        
+        cache.set(cacheKey, total, cacheConfig.ttlMs);
+        return total;
+    } catch (err) {
+        logger.error(`[COMMIT_SERVICE] Failed to fetch total contributions: ${err.message}`);
+        return 0;
+    }
+}
