@@ -30,7 +30,7 @@ async function main() {
     const totalTimer = logger.time('Total execution');
 
     logger.info('═══════════════════════════════════════════════');
-    logger.info('  🤖 GitHub README Automation Bot — Starting   ');
+    logger.info('  🐼 NeonPanda Automation Bot — Starting   ');
     logger.info(`  User: @${config.github.username}`);
     logger.info('═══════════════════════════════════════════════');
 
@@ -106,7 +106,7 @@ async function main() {
 
 // Top-level error handler — unrecoverable failures exit with code 1
 main().catch((err) => {
-    logger.error('💥 Fatal error — readme-bot terminated', { message: err.message });
+    logger.error('💥 Fatal error — NeonPanda terminated', { message: err.message });
     logger.error(err.stack);
     process.exit(1);
 });

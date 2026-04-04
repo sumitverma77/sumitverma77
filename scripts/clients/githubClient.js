@@ -21,7 +21,7 @@ function buildHeaders() {
         Authorization: `Bearer ${github.token}`,
         Accept: 'application/vnd.github+json',
         'X-GitHub-Api-Version': '2022-11-28',
-        'User-Agent': `${github.username}-readme-bot/1.0`,
+        'User-Agent': `${github.username}-NeonPanda/1.0`,
     };
 }
 
