@@ -155,7 +155,8 @@
 | Metric | Value |
 |--------|-------|
 | 📁 Public Repositories | **24** |
-| 💾 Total Commits | **341** |
+| 🌟 Total Contributions | **893** (Last Year) |
+| 💾 Total Commits (All time) | **343** |
 | 🧠 Primary Language (by repo usage) | **Java** |
 
 ---
@@ -196,12 +197,25 @@
 | Insight | Detail | Info | Extra |
 |---------|--------|------|-------|
 | 🏆 Most Active Repo | **[sumitverma77](https://github.com/sumitverma77/sumitverma77)** | JavaScript | ⭐ 0 |
-| 📈 Commit Frequency | **21** commits in last 4 weeks | ~5.3/week | — |
+| 📈 Commit Frequency | **23** commits in last 4 weeks | ~5.8/week | — |
 | 📅 Most Active Day  | **Friday** | — | — |
 
 ---
 
-<sub>🤖 Auto-updated by <a href=".github/workflows/update-readme.yml">readme-bot</a> · Sat, 04 Apr 2026 03:22:15 GMT</sub>
+### 🏆 LeetCode Stats
+
+| Metric | Detail | Info |
+|--------|--------|------|
+| 🎯 **Total Solved** | **1034** | `███████░░░░░░░░░░░░░` |
+| 🟢 Easy | 372 | — |
+| 🟡 Medium | 598 | — |
+| 🔴 Hard | 64 | — |
+| 🏆 Contest Rating | **1798** | Global Rank: 65883 |
+| 📆 Contests Attended| **78** | — |
+
+---
+
+<sub>🤖 Auto-updated by <a href=".github/workflows/update-readme.yml">readme-bot</a> · Sat, 04 Apr 2026 12:40:02 GMT</sub>
 
 <!-- GITHUB_STATS:END -->
 
