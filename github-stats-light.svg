@@ -32,10 +32,10 @@
                     100% { transform: translate(0); }
                 }
 
-                .blink { animation: blink-anim 1s infinite; }
+                .blink { animation: blink-anim 1.5s infinite ease-in-out; }
                 @keyframes blink-anim {
-                    0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px #CC0000); fill: #CC0000;}
-                    50% { opacity: 0.25; filter: none; }
+                    0%, 100% { opacity: 1; filter: drop-shadow(0 0 8px #CC0000); fill: #CC0000;}
+                    50% { opacity: 0.2; filter: none; stroke: #CC0000; stroke-width: 1; }
                 }
                 .live-text {
                     fill: #CC0000;
@@ -55,14 +55,14 @@
         <line x1="40" y1="65" x2="350" y2="65" stroke="#008833" stroke-width="2" opacity="0.5"/>
         <line x1="330" y1="65" x2="350" y2="45" stroke="#008833" stroke-width="2" opacity="0.5"/>
         
-        <g transform="translate(530, 45)">
-            <circle cx="0" cy="-5" r="4" class="blink"/>
-            <text x="12" y="0" class="live-text" style="font-size: 16px; font-weight: bold; letter-spacing: 2px;">sumitverma77.LIVE</text>
+        <g transform="translate(670, 45)">
+            <circle cx="0" cy="-5" r="5" class="blink"/>
+            <text x="14" y="0" class="live-text" style="font-size: 16px; font-weight: bold; letter-spacing: 2px;">LIVE</text>
         </g>
         
         <g transform="translate(40, 160)">
             <text x="0" y="0" class="dim label">TOTAL_CONTRIBUTIONS</text>
-            <text x="0" y="70" class="green big-number glitch">925</text>
+            <text x="0" y="70" class="green big-number glitch">929</text>
         </g>
 
         <g transform="translate(480, 150)">

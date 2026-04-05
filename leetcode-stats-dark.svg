@@ -38,10 +38,10 @@
                     100% { opacity: 1; filter: drop-shadow(0 0 10px #FF00FF); }
                 }
 
-                .blink { animation: blink-anim 1s infinite; }
+                .blink { animation: blink-anim 1.5s infinite ease-in-out; }
                 @keyframes blink-anim {
                     0%, 100% { opacity: 1; filter: drop-shadow(0 0 5px #FF3333); }
-                    50% { opacity: 0.3; filter: none; }
+                    50% { opacity: 0.2; filter: none; }
                 }
 
                 .ring-bg { fill: none; stroke: rgba(255, 255, 255, 0.1); stroke-width: 6; }
@@ -67,9 +67,9 @@
         <line x1="40" y1="65" x2="350" y2="65" stroke="#00F5FF" stroke-width="2" opacity="0.5"/>
         <line x1="330" y1="65" x2="350" y2="45" stroke="#00F5FF" stroke-width="2" opacity="0.5"/>
         
-        <g transform="translate(560, 45)">
-            <circle cx="0" cy="-5" r="4" fill="#FF3333" class="blink"/>
-            <text x="12" y="0" class="red" style="font-size: 16px; font-weight: bold; letter-spacing: 2px;">sumit_verma_77.LIVE</text>
+        <g transform="translate(700, 45)">
+            <circle cx="0" cy="-5" r="5" fill="#FF3333" class="blink"/>
+            <text x="14" y="0" class="red" style="font-size: 16px; font-weight: bold; letter-spacing: 2px;">LIVE</text>
         </g>
         
         <g transform="translate(40, 160)">
