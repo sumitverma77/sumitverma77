@@ -62,7 +62,7 @@
         
         <g transform="translate(40, 160)">
             <text x="0" y="0" class="dim label">TOTAL_CONTRIBUTIONS</text>
-            <text x="0" y="70" class="green big-number glitch">929</text>
+            <text x="0" y="70" class="green big-number glitch">930</text>
         </g>
 
         <g transform="translate(480, 150)">
