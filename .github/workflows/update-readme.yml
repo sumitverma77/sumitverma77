@@ -47,7 +47,7 @@ jobs:
           git config user.name "NeonPanda🤖"
           git config user.email "120080726+sumitverma77@users.noreply.github.com"
           # Safe commit pattern: only push if there are actual diffs or untracked files
-          git add README.md leetcode-stats.svg github-stats.svg || true
+          git add README.md *.svg || true
           if git diff --staged --quiet; then
             echo "✅ No changes detected — Assets are already up-to-date."
           else
