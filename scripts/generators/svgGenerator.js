@@ -106,10 +106,10 @@ export function generateLeetCodeSvg(stats, theme = 'dark') {
                     100% { opacity: 1; filter: drop-shadow(0 0 10px ${colors.magenta}); }
                 }
 
-                .blink { animation: blink-anim 1s infinite; }
+                .blink { animation: blink-anim 1.5s infinite ease-in-out; }
                 @keyframes blink-anim {
                     0%, 100% { opacity: 1; filter: drop-shadow(0 0 5px ${colors.red}); }
-                    50% { opacity: 0.3; filter: none; }
+                    50% { opacity: 0.2; filter: none; }
                 }
 
                 .ring-bg { fill: none; stroke: ${colors.ringBg}; stroke-width: 6; }
@@ -135,9 +135,9 @@ export function generateLeetCodeSvg(stats, theme = 'dark') {
         <line x1="40" y1="65" x2="350" y2="65" stroke="${colors.cyan}" stroke-width="2" opacity="0.5"/>
         <line x1="330" y1="65" x2="350" y2="45" stroke="${colors.cyan}" stroke-width="2" opacity="0.5"/>
         
-        <g transform="translate(560, 45)">
-            <circle cx="0" cy="-5" r="4" fill="${colors.red}" class="blink"/>
-            <text x="12" y="0" class="red" style="font-size: 16px; font-weight: bold; letter-spacing: 2px;">${config.leetcode.username}.LIVE</text>
+        <g transform="translate(700, 45)">
+            <circle cx="0" cy="-5" r="5" fill="${colors.red}" class="blink"/>
+            <text x="14" y="0" class="red" style="font-size: 16px; font-weight: bold; letter-spacing: 2px;">LIVE</text>
         </g>
         
         <g transform="translate(40, 160)">
@@ -228,10 +228,10 @@ export function generateGithubSvg(stats, theme = 'dark') {
                     100% { transform: translate(0); }
                 }
 
-                .blink { animation: blink-anim 1s infinite; }
+                .blink { animation: blink-anim 1.5s infinite ease-in-out; }
                 @keyframes blink-anim {
-                    0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px ${colors.red}); fill: ${colors.red};}
-                    50% { opacity: 0.25; filter: none; }
+                    0%, 100% { opacity: 1; filter: drop-shadow(0 0 8px ${colors.red}); fill: ${colors.red};}
+                    50% { opacity: 0.2; filter: none; stroke: ${colors.red}; stroke-width: 1; }
                 }
                 .live-text {
                     fill: ${colors.red};
@@ -251,9 +251,9 @@ export function generateGithubSvg(stats, theme = 'dark') {
         <line x1="40" y1="65" x2="350" y2="65" stroke="${colors.green}" stroke-width="2" opacity="0.5"/>
         <line x1="330" y1="65" x2="350" y2="45" stroke="${colors.green}" stroke-width="2" opacity="0.5"/>
         
-        <g transform="translate(530, 45)">
-            <circle cx="0" cy="-5" r="4" class="blink"/>
-            <text x="12" y="0" class="live-text" style="font-size: 16px; font-weight: bold; letter-spacing: 2px;">sumitverma77.LIVE</text>
+        <g transform="translate(670, 45)">
+            <circle cx="0" cy="-5" r="5" class="blink"/>
+            <text x="14" y="0" class="live-text" style="font-size: 16px; font-weight: bold; letter-spacing: 2px;">LIVE</text>
         </g>
         
         <g transform="translate(40, 160)">
