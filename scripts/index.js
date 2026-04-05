@@ -70,28 +70,42 @@ async function main() {
     logger.info('[Phase 3] Generating SVG Assets and updating README.md...');
     const phase3Timer = logger.time('Phase 3 — Output Generation');
 
-    // Generate LeetCode Cyberpunk SVG
+    // Generate LeetCode Cyberpunk SVGs (Dark & Light)
     if (leetcodeStats) {
         try {
-            const svgContent = generateLeetCodeSvg(leetcodeStats);
-            await writeFile(resolve('leetcode-stats.svg'), svgContent, 'utf-8');
-            logger.info(`✨ Generated: leetcode-stats.svg`);
+            const darkSvg = generateLeetCodeSvg(leetcodeStats, 'dark');
+            const lightSvg = generateLeetCodeSvg(leetcodeStats, 'light');
+            
+            await Promise.all([
+                writeFile(resolve('leetcode-stats-dark.svg'), darkSvg, 'utf-8'),
+                writeFile(resolve('leetcode-stats-light.svg'), lightSvg, 'utf-8')
+            ]);
+            
+            logger.info(`✨ Generated: leetcode-stats-{dark,light}.svg`);
         } catch (err) {
             logger.error(`Failed to write leetcode-stats.svg: ${err.message}`);
         }
     }
 
-    // Generate GitHub Cyberpunk SVG
+    // Generate GitHub Cyberpunk SVGs (Dark & Light)
     try {
         const topLanguage = languages[0]?.language || 'N/A';
-        const ghSvgContent = generateGithubSvg({
+        const githubStatsPayload = {
             totalContributions: githubStats.totalContributions,
             currentStreak: githubStats.currentStreak,
             longestStreak: githubStats.longestStreak,
             topLanguage,
-        });
-        await writeFile(resolve('github-stats.svg'), ghSvgContent, 'utf-8');
-        logger.info(`✨ Generated: github-stats.svg`);
+        };
+
+        const darkGhSvg = generateGithubSvg(githubStatsPayload, 'dark');
+        const lightGhSvg = generateGithubSvg(githubStatsPayload, 'light');
+
+        await Promise.all([
+            writeFile(resolve('github-stats-dark.svg'), darkGhSvg, 'utf-8'),
+            writeFile(resolve('github-stats-light.svg'), lightGhSvg, 'utf-8')
+        ]);
+
+        logger.info(`✨ Generated: github-stats-{dark,light}.svg`);
     } catch (err) {
         logger.error(`Failed to write github-stats.svg: ${err.message}`);
     }
