@@ -44,8 +44,8 @@ jobs:
 
       - name: 💾 Commit & push if changes exist
         run: |
-          git config user.name "NeonPanda[bot]"
-          git config user.email "NeonPanda@users.noreply.github.com"
+          git config user.name "NeonPanda🤖"
+          git config user.email "120080726+sumitverma77@users.noreply.github.com"
           # Safe commit pattern: only push if there are actual diffs or untracked files
           git add README.md leetcode-stats.svg github-stats.svg || true
           if git diff --staged --quiet; then
