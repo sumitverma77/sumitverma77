@@ -82,7 +82,7 @@
             <text x="20" y="0" class="dim label">CONTEST_RATING</text>
             <text x="20" y="40" class="magenta big-number pulse" style="font-size: 42px;">1798</text>
             
-            <text x="20" y="70" class="dim label">GLOBAL_RANK: <tspan class="white">67916</tspan></text>
+            <text x="20" y="70" class="dim label">GLOBAL_RANK: <tspan class="white">68185</tspan></text>
             <text x="20" y="100" class="dim label">ATTENDED: <tspan class="white">78</tspan></text>
         </g>
 
