@@ -62,13 +62,13 @@
         
         <g transform="translate(40, 160)">
             <text x="0" y="0" class="dim label">TOTAL_CONTRIBUTIONS</text>
-            <text x="0" y="70" class="green big-number glitch">1050</text>
+            <text x="0" y="70" class="green big-number glitch">1051</text>
         </g>
 
         <g transform="translate(480, 150)">
             <rect x="0" y="-30" width="280" height="120" fill="rgba(0,136,51,0.05)" stroke="#008833" stroke-width="1" rx="5" opacity="0.3"/>
             <text x="20" y="0" class="dim label">CURRENT_STREAK</text>
-            <text x="20" y="40" class="magenta stat-value" style="font-size: 38px;">2 <tspan class="dim" style="font-size: 16px">DAYS</tspan></text>
+            <text x="20" y="40" class="magenta stat-value" style="font-size: 38px;">0 <tspan class="dim" style="font-size: 16px">DAYS</tspan></text>
             
             <text x="20" y="75" class="dim label">LONGEST_STREAK: <tspan class="white">16</tspan></text>
         </g>
