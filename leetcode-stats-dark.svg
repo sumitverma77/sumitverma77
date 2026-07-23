@@ -89,15 +89,15 @@
         <g transform="translate(0, 320)">
             <g transform="translate(100, 40)">
                 <circle cx="0" cy="0" r="40" class="ring-bg"/>
-                <circle cx="0" cy="0" r="40" class="ring green" style="stroke-dashoffset: 160.6691766935063; filter: drop-shadow(0 0 5px #00FF66);" />
-                <text x="0" y="5" class="white stat-value" text-anchor="middle">382</text>
+                <circle cx="0" cy="0" r="40" class="ring green" style="stroke-dashoffset: 160.90650191757354; filter: drop-shadow(0 0 5px #00FF66);" />
+                <text x="0" y="5" class="white stat-value" text-anchor="middle">381</text>
                 <text x="0" y="70" class="green label" text-anchor="middle">EASY</text>
             </g>
             
             <g transform="translate(250, 40)">
                 <circle cx="0" cy="0" r="40" class="ring-bg"/>
-                <circle cx="0" cy="0" r="40" class="ring yellow" style="stroke-dashoffset: 106.08437515804627; filter: drop-shadow(0 0 5px #FFEB3B);" />
-                <text x="0" y="5" class="white stat-value" text-anchor="middle">612</text>
+                <circle cx="0" cy="0" r="40" class="ring yellow" style="stroke-dashoffset: 105.84704993397906; filter: drop-shadow(0 0 5px #FFEB3B);" />
+                <text x="0" y="5" class="white stat-value" text-anchor="middle">613</text>
                 <text x="0" y="70" class="yellow label" text-anchor="middle">MEDIUM</text>
             </g>
 
