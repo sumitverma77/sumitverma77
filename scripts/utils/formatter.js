@@ -1,8 +1,8 @@
 /**
- * Formatter Utility — SVG-only output without headings or collapsible details (v6)
+ * Formatter Utility — SVG-only output without headings or collapsible details (v7)
  *
- * v6: Removes all <h2> headings and <details> wrappers to save vertical space.
- *     Outputs pure center-aligned SVGs for contribution history and telemetry.
+ * v7: Removes duplicate contribution-history SVG since 0-profile-details.svg is displayed in README.
+ *     Outputs pure center-aligned SVGs for GitHub and LeetCode telemetry.
  */
 
 /**
@@ -12,10 +12,6 @@
  */
 export function formatStatsBlock(data, updatedAt) {
     return `
-<p align="center">
-  <img src="./assets/contribution-history.svg" alt="GitHub Contribution History" style="width: 100%; max-width: 880px;" />
-</p>
-
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="github-stats-dark.svg">
