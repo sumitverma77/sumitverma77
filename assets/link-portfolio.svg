@@ -1,10 +1,12 @@
 <svg width="280" height="76" viewBox="0 0 280 76" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
   <title id="t">Portfolio</title><desc id="d">Visit sumitverma.github.io</desc>
   <style>
-    .card{fill:#f6f8fa;stroke:#d0d7de}.label{font:600 10px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:1.6px;fill:#656d76}.value{font:600 15px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#1f2328}.icon{fill:#1f883d}.arrow{fill:#656d76}
-    @media(prefers-color-scheme:dark){.card{fill:#161b22;stroke:#30363d}.label,.arrow{fill:#8b949e}.value{fill:#f0f6fc}.icon{fill:#3fb950}}
+    .card{fill:#f6f8fa;stroke:#d0d7de}.label{font:600 10px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:1.6px;fill:#656d76}.value{font:600 15px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#1f2328}.arrow{fill:#656d76}
+    @media(prefers-color-scheme:dark){.card{fill:#161b22;stroke:#30363d}.label,.arrow{fill:#8b949e}.value{fill:#f0f6fc}}
   </style>
   <rect class="card" x=".5" y=".5" width="279" height="75" rx="10"/>
-  <circle class="icon" cx="34" cy="38" r="14"/><path d="M28 38h12M34 32v12" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  <g transform="translate(20, 24) scale(1.15)">
+    <path fill="#2f81f7" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2c1.787 0 3.432.61 4.755 1.636-.57 1.054-1.22 2.15-1.933 3.194a21.43 21.43 0 0 1-1.042 1.39H10.22c-.378-.492-.733-.96-1.042-1.39-.713-1.044-1.363-2.14-1.933-3.194A9.957 9.957 0 0 1 12 2zM4.172 6.071c.563.957 1.182 1.956 1.841 2.923.332.486.711 1.002 1.115 1.526H3.013A9.972 9.972 0 0 1 4.172 6.071zm15.656 0a9.972 9.972 0 0 1 1.159 4.449h-4.115c.404-.524.783-1.04 1.115-1.526.659-.967 1.278-1.966 1.841-2.923zM2.083 12c0-.507.038-1.005.111-1.48h4.757c-.114.484-.188.98-.216 1.48.028.5.102.996.216 1.48H2.194a10.15 10.15 0 0 1-.111-1.48zm1.041 2.96h4.115c-.404.524-.783 1.04-1.115 1.526-.659.967-1.278 1.966-1.841 2.923a9.972 9.972 0 0 1-1.159-4.449zm13.752 4.449c-.563-.957-1.182-1.956-1.841-2.923-.332-.486-.711-1.002-1.115-1.526h4.115a9.972 9.972 0 0 1-1.159 4.449zM12 22c-1.787 0-3.432-.61-4.755-1.636.57-1.054 1.22-2.15 1.933-3.194.309-.43.664-.898 1.042-1.39h3.56c.378.492.733.96 1.042 1.39.713 1.044 1.363 2.14 1.933 3.194A9.957 9.957 0 0 1 12 22z" />
+  </g>
   <text class="label" x="60" y="29">PORTFOLIO</text><text class="value" x="60" y="51">sumitverma.github.io</text><text class="arrow" x="250" y="43" font-family="Arial" font-size="18">↗</text>
 </svg>

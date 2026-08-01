@@ -9,14 +9,10 @@
 </p>
 
 <p align="center">
-  <img src="./assets/now.svg" width="100%" alt="Now: building backend APIs, architecting cloud infrastructure (Terraform, VMs, IP, CI/CD), and solving ICPC &apos;24 &amp; system design" />
+  <img src="./assets/now.svg" width="100%" alt="Now: building scalable backend APIs, architecting cloud &amp; infrastructure systems, and solving algorithms &amp; data structures" />
 </p>
 
 <br />
-
-<p align="center">
-  <img src="./assets/contribution-history.svg" alt="Sumit Verma All-Time Contribution History (2022 – Today)" width="100%" />
-</p>
 
 <!-- GITHUB_STATS:START -->
 <!-- GITHUB_STATS:END -->
