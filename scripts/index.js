@@ -20,7 +20,7 @@ import { getTopLanguages } from './services/languageService.js';
 import { getLeetCodeStats } from './services/leetcodeService.js';
 import { formatStatsBlock } from './utils/formatter.js';
 import { updateReadme } from './generators/readmeGenerator.js';
-import { generateLeetCodeSvg, generateGithubSvg } from './generators/svgGenerator.js';
+import { generateLeetCodeSvg, generateGithubSvg, generateContributionHistorySvg } from './generators/svgGenerator.js';
 import { writeFile } from 'fs/promises';
 import { resolve } from 'path';
 
@@ -100,15 +100,20 @@ async function main() {
 
         const darkGhSvg = generateGithubSvg(githubStatsPayload, 'dark');
         const lightGhSvg = generateGithubSvg(githubStatsPayload, 'light');
+        const historySvg = generateContributionHistorySvg({
+            totalContributions: githubStats.totalContributions,
+            totalRepos
+        });
 
         await Promise.all([
             writeFile(resolve('github-stats-dark.svg'), darkGhSvg, 'utf-8'),
-            writeFile(resolve('github-stats-light.svg'), lightGhSvg, 'utf-8')
+            writeFile(resolve('github-stats-light.svg'), lightGhSvg, 'utf-8'),
+            writeFile(resolve('assets/contribution-history.svg'), historySvg, 'utf-8')
         ]);
 
-        logger.info(`✨ Generated: github-stats-{dark,light}.svg`);
+        logger.info(`✨ Generated: github-stats-{dark,light}.svg & contribution-history.svg`);
     } catch (err) {
-        logger.error(`Failed to write github-stats.svg: ${err.message}`);
+        logger.error(`Failed to write GitHub SVGs: ${err.message}`);
     }
 
     const wasUpdated = await updateReadme(statsBlock);

@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://sumitverma.github.io"><img src="./assets/link-portfolio.svg" width="31.5%" alt="Portfolio — sumitverma.github.io" /></a>&nbsp;
+  <a href="https://sumitverma77.github.io"><img src="./assets/link-portfolio.svg" width="31.5%" alt="Portfolio — sumitverma77.github.io" /></a>&nbsp;
   <a href="https://linkedin.com/in/sumit-verma-"><img src="./assets/link-linkedin.svg" width="31.5%" alt="LinkedIn — Sumit Verma" /></a>&nbsp;
   <a href="https://leetcode.com/sumit_verma_77"><img src="./assets/link-leetcode.svg" width="31.5%" alt="LeetCode — sumit_verma_77" /></a>
 </p>

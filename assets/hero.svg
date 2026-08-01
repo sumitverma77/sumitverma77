@@ -18,6 +18,6 @@
   <rect class="bg" x=".5" y=".5" width="799" height="199" rx="10"/>
   <circle class="dot" cx="44" cy="48" r="4"/>
   <text class="label" x="58" y="52">SUMIT VERMA / BACKEND, CLOUD &amp; INFRASTRUCTURE ARCHITECT</text>
-  <text class="title" x="44" y="105">&ldquo;systems should be resilient by design.&rdquo;</text>
+  <text class="title" x="44" y="105">&#8220;systems should be resilient by design.&#8221;</text>
   <text class="desc" x="44" y="142">backend engineering, cloud &amp; infrastructure architecture, and high-performance systems.</text>
 </svg>

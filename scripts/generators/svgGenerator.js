@@ -287,3 +287,78 @@ export function generateGithubSvg(stats, theme = 'dark') {
         <text x="740" y="168" class="dim" style="font-size: 9px;">v3.0_SLIM</text>
     </svg>`;
 }
+
+export function generateContributionHistorySvg(stats, theme = 'dark') {
+    const total = stats?.totalContributions || '1,190';
+    const repos = stats?.totalRepos || '25';
+    
+    return `<svg width="880" height="220" viewBox="0 0 880 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+  <title id="t">Sumit Verma (sumitverma77) Contribution History</title>
+  <desc id="d">GitHub contribution details and activity history</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
+      .bg { fill: #0D1117; stroke: #30363d; stroke-width: 1.5; }
+      .title { font: bold 22px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #58a6ff; }
+      .label { font: 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; fill: #8b949e; }
+      .subtext { font: 11px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; fill: #8b949e; }
+      .axis { stroke: #30363d; stroke-width: 1; }
+      .icon { fill: #8b949e; }
+      .area { fill: url(#greenGradient); opacity: 0.85; }
+      .line { stroke: #3fb950; stroke-width: 2.5; fill: none; filter: drop-shadow(0 0 6px rgba(63, 185, 80, 0.4)); }
+    </style>
+    <linearGradient id="greenGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3fb950" stop-opacity="0.65" />
+      <stop offset="100%" stop-color="#238636" stop-opacity="0.05" />
+    </linearGradient>
+  </defs>
+  
+  <rect class="bg" x="1" y="1" width="878" height="218" rx="10" />
+
+  <!-- Left Column: User Details -->
+  <text class="title" x="35" y="45">SumitVerma (Sumit)</text>
+
+  <!-- GitHub Logo & Total Contributions -->
+  <g transform="translate(35, 75)">
+    <path class="icon" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
+    <text class="label" x="24" y="12">${total} Contributions in the last year</text>
+  </g>
+
+  <!-- Repo Icon & Public Repos -->
+  <g transform="translate(35, 115)">
+    <path class="icon" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z" />
+    <text class="label" x="24" y="12">${repos} Public Repos</text>
+  </g>
+
+  <!-- Clock Icon & Join Date -->
+  <g transform="translate(35, 155)">
+    <path class="icon" d="M8 0a8 8 0 110 16A8 8 0 018 0zm0 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM8 4a.75.75 0 01.75.75v3.5l2.25 1.5a.75.75 0 01-.84 1.24L7.66 9.3a.75.75 0 01-.41-.67V4.75A.75.75 0 018 4z" />
+    <text class="label" x="24" y="12">Joined GitHub 2022</text>
+  </g>
+
+  <!-- Right Column: Contribution Area Chart -->
+  <text class="subtext" x="830" y="40" text-anchor="end">contribution activity history</text>
+  
+  <!-- Chart Axes -->
+  <line class="axis" x1="390" y1="175" x2="830" y2="175" />
+  <line class="axis" x1="830" y1="65" x2="830" y2="178" />
+
+  <!-- Y Axis Labels -->
+  <text class="subtext" x="838" y="178">0</text>
+  <text class="subtext" x="838" y="145">300</text>
+  <text class="subtext" x="838" y="110">600</text>
+  <text class="subtext" x="838" y="75">1,200</text>
+
+  <!-- X Axis Labels -->
+  <text class="subtext" x="390" y="195">2022</text>
+  <text class="subtext" x="495" y="195">2023</text>
+  <text class="subtext" x="600" y="195">2024</text>
+  <text class="subtext" x="705" y="195">2025</text>
+  <text class="subtext" x="810" y="195">Today</text>
+
+  <!-- Area & Line Paths -->
+  <path class="area" d="M 390 174 L 430 165 L 480 155 L 530 148 L 570 135 L 620 120 L 670 95 L 720 110 L 770 85 L 815 72 L 830 70 L 830 174 Z" />
+  <path class="line" d="M 390 174 L 430 165 L 480 155 L 530 148 L 570 135 L 620 120 L 670 95 L 720 110 L 770 85 L 815 72 L 830 70" />
+</svg>`;
+}
+
