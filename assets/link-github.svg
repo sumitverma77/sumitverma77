@@ -1,0 +1,10 @@
+<svg width="280" height="76" viewBox="0 0 280 76" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+  <title id="t">GitHub</title><desc id="d">Visit sumitverma77 on GitHub</desc>
+  <style>
+    .card{fill:#f6f8fa;stroke:#d0d7de}.label{font:600 10px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:1.6px;fill:#656d76}.value{font:600 15px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#1f2328}.icon{fill:#24292f}.arrow{fill:#656d76}
+    @media(prefers-color-scheme:dark){.card{fill:#161b22;stroke:#30363d}.label,.arrow{fill:#8b949e}.value,.icon{fill:#f0f6fc}}
+  </style>
+  <rect class="card" x=".5" y=".5" width="279" height="75" rx="10"/>
+  <path class="icon" d="M34 22c-7.73 0-14 6.27-14 14 0 6.19 4.02 11.43 9.58 13.28.7.13.96-.3.96-.67v-2.36c-3.89.85-4.71-1.87-4.71-1.87-.64-1.62-1.56-2.05-1.56-2.05-1.27-.87.1-.85.1-.85 1.4.1 2.14 1.44 2.14 1.44 1.25 2.14 3.28 1.52 4.08 1.16.13-.91.49-1.52.89-1.87-3.11-.35-6.38-1.56-6.38-6.93 0-1.53.55-2.78 1.45-3.76-.15-.35-.63-1.78.14-3.71 0 0 1.18-.38 3.87 1.44a13.38 13.38 0 0 1 7.04 0c2.69-1.82 3.87-1.44 3.87-1.44.77 1.93.29 3.36.14 3.71.9.98 1.45 2.23 1.45 3.76 0 5.38-3.28 6.57-6.4 6.92.5.43.95 1.28.95 2.58v3.83c0 .37.26.8.96.67C43.98 47.43 48 42.19 48 36c0-7.73-6.27-14-14-14z"/>
+  <text class="label" x="60" y="29">GITHUB</text><text class="value" x="60" y="51">sumitverma77</text><text class="arrow" x="250" y="43" font-family="Arial" font-size="18">↗</text>
+</svg>
