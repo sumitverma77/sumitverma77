@@ -320,7 +320,7 @@ export function generateContributionHistorySvg(stats, theme = 'dark') {
   <rect class="bg" x="1" y="1" width="878" height="218" rx="10" />
 
   <!-- Left Column: User Details -->
-  <text class="title" x="35" y="45">SumitVerma (Sumit)</text>
+  <text class="title" x="35" y="45">sumitverma77</text>
 
   <!-- GitHub Logo & Total Contributions -->
   <g transform="translate(35, 75)">
