@@ -15,7 +15,7 @@
 <br />
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=sumitverma77&bg_color=0D1117&color=00F5FF&line=00F5FF&point=FFFFFF&area=true&area_color=00F5FF1A&hide_border=true&custom_title=All-Time%20Contribution%20History%20(Start%20to%20Today)" alt="GitHub All-Time Contribution History Graph" width="100%" />
+  <img src="./assets/contribution-history.svg" alt="Sumit Verma All-Time Contribution History (2022 – Today)" width="100%" />
 </p>
 
 <!-- GITHUB_STATS:START -->
