@@ -15,8 +15,33 @@
 <br />
 
 <p align="center">
-  <img src="./assets/contribution-history.svg" alt="GitHub Contribution History" width="100%" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="contribution-history-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="contribution-history-light.svg">
+    <img src="assets/contribution-history.svg" alt="GitHub Contribution History" style="width: 100%; max-width: 880px;" />
+  </picture>
 </p>
 
 <!-- GITHUB_STATS:START -->
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="github-stats-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="github-stats-light.svg">
+    <img src="github-stats-dark.svg" alt="GitHub Cyberpunk Card" style="width: 100%; max-width: 880px;" />
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="leetcode-stats-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="leetcode-stats-light.svg">
+    <img src="leetcode-stats-dark.svg" alt="LeetCode Cyberpunk Card" style="width: 100%; max-width: 880px;" />
+  </picture>
+</p>
+
+---
+
+<sub>🐼 Auto-updated by <a href=".github/workflows/update-readme.yml">NeonPanda</a> · Sat, 01 Aug 2026 10:14:46 GMT</sub>
+
 <!-- GITHUB_STATS:END -->
