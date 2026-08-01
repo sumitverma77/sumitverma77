@@ -15,7 +15,7 @@
 <br />
 
 <p align="center">
-  <img src="./profile-summary-card-output/github_dark/0-profile-details.svg" alt="GitHub contribution details" width="100%" />
+  <img src="./assets/contribution-history.svg" alt="GitHub Contribution History" width="100%" />
 </p>
 
 <!-- GITHUB_STATS:START -->
