@@ -47,7 +47,7 @@ export function generateLeetCodeSvg(stats, theme = 'dark') {
     if (!stats) return '';
 
     const colors = getColors(theme, 'leetcode');
-    const width = 880;
+    const width = 800;
     const height = 180;
     
     const total = stats.totalSolved || 0;
@@ -132,30 +132,30 @@ export function generateLeetCodeSvg(stats, theme = 'dark') {
 
         <rect width="100%" height="100%" class="bg" rx="8"/>
 
-        <text x="35" y="30" class="cyan title">LEETCODE_SYSTEM::TELEMETRY</text>
-        <line x1="35" y1="40" x2="330" y2="40" stroke="${colors.cyan}" stroke-width="1.5" opacity="0.5"/>
-        <line x1="315" y1="40" x2="330" y2="28" stroke="${colors.cyan}" stroke-width="1.5" opacity="0.5"/>
+        <text x="25" y="30" class="cyan title">LEETCODE_SYSTEM::TELEMETRY</text>
+        <line x1="25" y1="40" x2="310" y2="40" stroke="${colors.cyan}" stroke-width="1.5" opacity="0.5"/>
+        <line x1="295" y1="40" x2="310" y2="28" stroke="${colors.cyan}" stroke-width="1.5" opacity="0.5"/>
         
-        <g transform="translate(800, 28)">
+        <g transform="translate(720, 28)">
             <circle cx="0" cy="-4" r="4" fill="${colors.red}" class="blink"/>
             <text x="12" y="0" class="red" style="font-size: 12px; font-weight: bold; letter-spacing: 2px;">LIVE</text>
         </g>
         
-        <g transform="translate(35, 65)">
+        <g transform="translate(25, 65)">
             <text x="0" y="0" class="dim label">TOTAL_SOLVED</text>
             <text x="0" y="46" class="cyan big-number glitch">${total}</text>
             <text x="0" y="72" class="dim label">ALGORITHMS &amp; DATA STRUCTURES</text>
         </g>
 
-        <g transform="translate(300, 52)">
-            <rect x="0" y="0" width="250" height="105" fill="${theme === 'dark' ? 'rgba(255,0,255,0.05)' : 'rgba(204,0,204,0.05)'}" stroke="${colors.magenta}" stroke-width="1" rx="6" opacity="0.3"/>
-            <text x="18" y="22" class="dim label">CONTEST_RATING</text>
-            <text x="18" y="56" class="magenta big-number pulse" style="font-size: 30px;">${rating}</text>
-            <text x="18" y="78" class="dim label">GLOBAL_RANK: <tspan class="white">${rank}</tspan></text>
-            <text x="18" y="95" class="dim label">ATTENDED: <tspan class="white">${contests}</tspan></text>
+        <g transform="translate(260, 52)">
+            <rect x="0" y="0" width="230" height="105" fill="${theme === 'dark' ? 'rgba(255,0,255,0.05)' : 'rgba(204,0,204,0.05)'}" stroke="${colors.magenta}" stroke-width="1" rx="6" opacity="0.3"/>
+            <text x="15" y="22" class="dim label">CONTEST_RATING</text>
+            <text x="15" y="56" class="magenta big-number pulse" style="font-size: 30px;">${rating}</text>
+            <text x="15" y="78" class="dim label">GLOBAL_RANK: <tspan class="white">${rank}</tspan></text>
+            <text x="15" y="95" class="dim label">ATTENDED: <tspan class="white">${contests}</tspan></text>
         </g>
 
-        <g transform="translate(580, 95)">
+        <g transform="translate(515, 95)">
             <g transform="translate(45, 0)">
                 <circle cx="0" cy="0" r="${radius}" class="ring-bg"/>
                 <circle cx="0" cy="0" r="${radius}" class="ring green" style="stroke-dashoffset: ${maxDash - (easyPerc * maxDash)}; filter: drop-shadow(0 0 5px ${colors.green});" />
@@ -178,7 +178,7 @@ export function generateLeetCodeSvg(stats, theme = 'dark') {
             </g>
         </g>
         
-        <text x="820" y="168" class="dim" style="font-size: 9px;">v3.0_SLIM</text>
+        <text x="740" y="168" class="dim" style="font-size: 9px;">v3.0_SLIM</text>
     </svg>`;
 }
 
@@ -186,7 +186,7 @@ export function generateGithubSvg(stats, theme = 'dark') {
     if (!stats) return '';
 
     const colors = getColors(theme, 'github');
-    const width = 880;
+    const width = 800;
     const height = 180;
     
     const total = stats.totalContributions || 0;
@@ -244,30 +244,30 @@ export function generateGithubSvg(stats, theme = 'dark') {
 
         <rect width="100%" height="100%" class="bg" rx="8"/>
 
-        <text x="35" y="30" class="green title">GITHUB_SYSTEM::TELEMETRY</text>
-        <line x1="35" y1="40" x2="330" y2="40" stroke="${colors.green}" stroke-width="1.5" opacity="0.5"/>
-        <line x1="315" y1="40" x2="330" y2="28" stroke="${colors.green}" stroke-width="1.5" opacity="0.5"/>
+        <text x="25" y="30" class="green title">GITHUB_SYSTEM::TELEMETRY</text>
+        <line x1="25" y1="40" x2="310" y2="40" stroke="${colors.green}" stroke-width="1.5" opacity="0.5"/>
+        <line x1="295" y1="40" x2="310" y2="28" stroke="${colors.green}" stroke-width="1.5" opacity="0.5"/>
         
-        <g transform="translate(800, 28)">
+        <g transform="translate(720, 28)">
             <circle cx="0" cy="-4" r="4" class="blink"/>
             <text x="12" y="0" class="live-text" style="font-size: 12px; font-weight: bold; letter-spacing: 2px;">LIVE</text>
         </g>
         
-        <g transform="translate(35, 65)">
+        <g transform="translate(25, 65)">
             <text x="0" y="0" class="dim label">TOTAL_CONTRIBUTIONS</text>
             <text x="0" y="46" class="green big-number glitch">${total}</text>
             <text x="0" y="72" class="dim label">TOTAL_COMMITS: <tspan class="white">${totalCommits}</tspan></text>
         </g>
 
-        <g transform="translate(320, 52)">
-            <rect x="0" y="0" width="260" height="105" fill="${theme === 'dark' ? 'rgba(0,255,102,0.05)' : 'rgba(0,136,51,0.05)'}" stroke="${colors.green}" stroke-width="1" rx="6" opacity="0.3"/>
+        <g transform="translate(290, 52)">
+            <rect x="0" y="0" width="240" height="105" fill="${theme === 'dark' ? 'rgba(0,255,102,0.05)' : 'rgba(0,136,51,0.05)'}" stroke="${colors.green}" stroke-width="1" rx="6" opacity="0.3"/>
             <text x="18" y="22" class="dim label">CURRENT_STREAK</text>
             <text x="18" y="56" class="magenta stat-value" style="font-size: 30px;">${currentStreak} <tspan class="dim" style="font-size: 14px">DAYS</tspan></text>
             
             <text x="18" y="82" class="dim label">LONGEST_STREAK: <tspan class="white">${longestStreak} DAYS</tspan></text>
         </g>
 
-        <g transform="translate(630, 65)">
+        <g transform="translate(565, 65)">
             <g transform="translate(0, 0)">
                 <text x="0" y="0" class="dim label">TOP_LANGUAGE</text>
                 <text x="0" y="24" class="cyan stat-value">${topLang}</text>
@@ -279,7 +279,7 @@ export function generateGithubSvg(stats, theme = 'dark') {
             </g>
         </g>
         
-        <text x="820" y="168" class="dim" style="font-size: 9px;">v3.0_SLIM</text>
+        <text x="740" y="168" class="dim" style="font-size: 9px;">v3.0_SLIM</text>
     </svg>`;
 }
 

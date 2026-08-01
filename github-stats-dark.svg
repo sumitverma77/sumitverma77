@@ -1,5 +1,5 @@
 
-    <svg width="880" height="180" viewBox="0 0 880 180" xmlns="http://www.w3.org/2000/svg">
+    <svg width="800" height="180" viewBox="0 0 800 180" xmlns="http://www.w3.org/2000/svg">
         <defs>
             <style>
                 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
@@ -46,30 +46,30 @@
 
         <rect width="100%" height="100%" class="bg" rx="8"/>
 
-        <text x="35" y="30" class="green title">GITHUB_SYSTEM::TELEMETRY</text>
-        <line x1="35" y1="40" x2="330" y2="40" stroke="#00FF66" stroke-width="1.5" opacity="0.5"/>
-        <line x1="315" y1="40" x2="330" y2="28" stroke="#00FF66" stroke-width="1.5" opacity="0.5"/>
+        <text x="25" y="30" class="green title">GITHUB_SYSTEM::TELEMETRY</text>
+        <line x1="25" y1="40" x2="310" y2="40" stroke="#00FF66" stroke-width="1.5" opacity="0.5"/>
+        <line x1="295" y1="40" x2="310" y2="28" stroke="#00FF66" stroke-width="1.5" opacity="0.5"/>
         
-        <g transform="translate(800, 28)">
+        <g transform="translate(720, 28)">
             <circle cx="0" cy="-4" r="4" class="blink"/>
             <text x="12" y="0" class="live-text" style="font-size: 12px; font-weight: bold; letter-spacing: 2px;">LIVE</text>
         </g>
         
-        <g transform="translate(35, 65)">
+        <g transform="translate(25, 65)">
             <text x="0" y="0" class="dim label">TOTAL_CONTRIBUTIONS</text>
             <text x="0" y="46" class="green big-number glitch">1,190</text>
             <text x="0" y="72" class="dim label">TOTAL_COMMITS: <tspan class="white">600+</tspan></text>
         </g>
 
-        <g transform="translate(320, 52)">
-            <rect x="0" y="0" width="260" height="105" fill="rgba(0,255,102,0.05)" stroke="#00FF66" stroke-width="1" rx="6" opacity="0.3"/>
+        <g transform="translate(290, 52)">
+            <rect x="0" y="0" width="240" height="105" fill="rgba(0,255,102,0.05)" stroke="#00FF66" stroke-width="1" rx="6" opacity="0.3"/>
             <text x="18" y="22" class="dim label">CURRENT_STREAK</text>
             <text x="18" y="56" class="magenta stat-value" style="font-size: 30px;">5 <tspan class="dim" style="font-size: 14px">DAYS</tspan></text>
             
             <text x="18" y="82" class="dim label">LONGEST_STREAK: <tspan class="white">12 DAYS</tspan></text>
         </g>
 
-        <g transform="translate(630, 65)">
+        <g transform="translate(565, 65)">
             <g transform="translate(0, 0)">
                 <text x="0" y="0" class="dim label">TOP_LANGUAGE</text>
                 <text x="0" y="24" class="cyan stat-value">Java</text>
@@ -81,5 +81,5 @@
             </g>
         </g>
         
-        <text x="820" y="168" class="dim" style="font-size: 9px;">v3.0_SLIM</text>
+        <text x="740" y="168" class="dim" style="font-size: 9px;">v3.0_SLIM</text>
     </svg>

@@ -28,7 +28,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="github-stats-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="github-stats-light.svg">
-    <img src="github-stats-dark.svg" alt="GitHub Cyberpunk Card" style="width: 100%; max-width: 880px;" />
+    <img src="github-stats-dark.svg" alt="GitHub Cyberpunk Card" style="width: 100%; max-width: 800px;" />
   </picture>
 </p>
 
@@ -36,12 +36,12 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="leetcode-stats-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="leetcode-stats-light.svg">
-    <img src="leetcode-stats-dark.svg" alt="LeetCode Cyberpunk Card" style="width: 100%; max-width: 880px;" />
+    <img src="leetcode-stats-dark.svg" alt="LeetCode Cyberpunk Card" style="width: 100%; max-width: 800px;" />
   </picture>
 </p>
 
 ---
 
-<sub>🐼 Auto-updated by <a href=".github/workflows/update-readme.yml">NeonPanda</a> · Sat, 01 Aug 2026 10:25:49 GMT</sub>
+<sub>🐼 Auto-updated by <a href=".github/workflows/update-readme.yml">NeonPanda</a> · Sat, 01 Aug 2026 10:47:53 GMT</sub>
 
 <!-- GITHUB_STATS:END -->

@@ -16,7 +16,7 @@ export function formatStatsBlock(data, updatedAt) {
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="github-stats-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="github-stats-light.svg">
-    <img src="github-stats-dark.svg" alt="GitHub Cyberpunk Card" style="width: 100%; max-width: 880px;" />
+    <img src="github-stats-dark.svg" alt="GitHub Cyberpunk Card" style="width: 100%; max-width: 800px;" />
   </picture>
 </p>
 
@@ -24,7 +24,7 @@ export function formatStatsBlock(data, updatedAt) {
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="leetcode-stats-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="leetcode-stats-light.svg">
-    <img src="leetcode-stats-dark.svg" alt="LeetCode Cyberpunk Card" style="width: 100%; max-width: 880px;" />
+    <img src="leetcode-stats-dark.svg" alt="LeetCode Cyberpunk Card" style="width: 100%; max-width: 800px;" />
   </picture>
 </p>
 
