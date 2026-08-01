@@ -92,6 +92,7 @@ async function main() {
         const topLanguage = languages[0]?.language || 'N/A';
         const githubStatsPayload = {
             totalContributions: githubStats.totalContributions,
+            totalCommits,
             currentStreak: githubStats.currentStreak,
             longestStreak: githubStats.longestStreak,
             topLanguage,

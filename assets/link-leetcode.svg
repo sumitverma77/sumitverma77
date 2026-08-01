@@ -1,0 +1,10 @@
+<svg width="280" height="76" viewBox="0 0 280 76" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+  <title id="t">LeetCode</title><desc id="d">Visit sumit_verma_77 on LeetCode</desc>
+  <style>
+    .card{fill:#f6f8fa;stroke:#d0d7de}.label{font:600 10px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:1.6px;fill:#656d76}.value{font:600 15px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#1f2328}.icon{fill:#FFA116}.arrow{fill:#656d76}
+    @media(prefers-color-scheme:dark){.card{fill:#161b22;stroke:#30363d}.label,.arrow{fill:#8b949e}.value{fill:#f0f6fc}}
+  </style>
+  <rect class="card" x=".5" y=".5" width="279" height="75" rx="10"/>
+  <rect x="20" y="24" width="28" height="28" rx="7" fill="#FFA116"/><path d="M30 38l-4-4 4-4M33 38l4-4-4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <text class="label" x="62" y="29">LEETCODE</text><text class="value" x="62" y="51">sumit_verma_77</text><text class="arrow" x="250" y="43" font-family="Arial" font-size="18">↗</text>
+</svg>

@@ -1,5 +1,5 @@
 <svg width="880" height="210" viewBox="0 0 880 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Sumit Verma, backend &amp; system architect</title>
+  <title id="title">Sumit Verma, backend, cloud &amp; infrastructure architect</title>
   <desc id="desc">Systems should be resilient by design.</desc>
   <style>
     .label { font: 600 13px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; letter-spacing: 2.4px; fill: #57606a; }
@@ -12,9 +12,9 @@
       .rule { stroke: #30363d; }
     }
   </style>
-  <text x="2" y="26" class="label">SUMIT VERMA / BACKEND &amp; SYSTEM ARCHITECT</text>
+  <text x="2" y="26" class="label">SUMIT VERMA / BACKEND, CLOUD &amp; INFRASTRUCTURE ARCHITECT</text>
   <line x1="2" y1="45" x2="878" y2="45" class="rule" />
   <text x="2" y="113" class="headline">systems should be resilient by design.</text>
-  <text x="4" y="158" class="copy">backend engineering, cloud infrastructure, and high-performance system design.</text>
+  <text x="4" y="158" class="copy">backend engineering, cloud infrastructure (Terraform, VMs, CI/CD, IP), &amp; scalable systems.</text>
   <line x1="2" y1="192" x2="878" y2="192" class="rule" />
 </svg>

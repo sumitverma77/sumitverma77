@@ -1,12 +1,9 @@
 /**
- * Formatter Utility — Cyberpunk SVG-only output (v3)
+ * Formatter Utility — Cyberpunk SVG-only output + All-Time Activity Graph (v4)
  *
- * v3: All legacy markdown table formatters removed.
- *     Output is purely two <details open> blocks embedding
- *     github-stats.svg and leetcode-stats.svg.
+ * v4: Includes all-time contribution history & activity graph alongside
+ *     the sleek widescreen (height 240) github-stats.svg and leetcode-stats.svg.
  */
-
-// ── Section formatters ────────────────────────────────────────────────────────
 
 /**
  * Compose the complete stats block injected into README between marker comments.
@@ -16,7 +13,18 @@
 export function formatStatsBlock(data, updatedAt) {
     return `
 <details open>
-  <summary><h2>📊 GitHub Cyberpunk Stats</h2></summary>
+  <summary><h2>📈 All-Time Contribution History &amp; Activity</h2></summary>
+
+  <br/>
+  <p align="center">
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=sumitverma77&bg_color=0D1117&color=00F5FF&line=00F5FF&point=FFFFFF&area=true&area_color=00F5FF1A&hide_border=true&custom_title=All-Time%20Contribution%20History%20(Start%20to%20Today)" alt="GitHub All-Time Contribution History Graph" style="width: 100%; max-width: 800px;" />
+  </p>
+</details>
+
+---
+
+<details open>
+  <summary><h2>📊 GitHub Cyberpunk Telemetry</h2></summary>
 
   <br/>
   <p align="center">
@@ -31,7 +39,7 @@ export function formatStatsBlock(data, updatedAt) {
 ---
 
 <details open>
-  <summary><h2>🏆 LeetCode Cyberpunk Stats</h2></summary>
+  <summary><h2>🏆 LeetCode Cyberpunk Telemetry</h2></summary>
 
   <br/>
   <p align="center">

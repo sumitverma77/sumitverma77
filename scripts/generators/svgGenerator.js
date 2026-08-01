@@ -1,6 +1,7 @@
 /**
  * Cyberpunk SVG Generator
  * Support for both Dark and Light modes with theme-aware color palettes.
+ * Widescreen, sleek height (240px) with rich telemetry info.
  */
 
 import config from '../config/config.js';
@@ -47,7 +48,7 @@ export function generateLeetCodeSvg(stats, theme = 'dark') {
 
     const colors = getColors(theme, 'leetcode');
     const width = 800;
-    const height = 450;
+    const height = 240;
     
     const total = stats.totalSolved || 0;
     const easy = stats.easySolved || 0;
@@ -58,7 +59,7 @@ export function generateLeetCodeSvg(stats, theme = 'dark') {
     const contests = stats.contestsAttended || 0;
 
     const diffSum = easy + medium + hard || 1; 
-    const radius = 40;
+    const radius = 28;
     const circumference = 2 * Math.PI * radius;
     const maxDash = circumference;
     
@@ -85,10 +86,10 @@ export function generateLeetCodeSvg(stats, theme = 'dark') {
                 .white { fill: ${colors.textMain}; }
                 .dim { fill: ${colors.textDim}; }
                 
-                .title { font-size: 28px; font-weight: bold; letter-spacing: 2px; }
-                .big-number { font-size: 72px; font-weight: bold; }
-                .label { font-size: 16px; letter-spacing: 1px; }
-                .stat-value { font-size: 22px; font-weight: bold; }
+                .title { font-size: 20px; font-weight: bold; letter-spacing: 2px; }
+                .big-number { font-size: 54px; font-weight: bold; }
+                .label { font-size: 13px; letter-spacing: 1px; }
+                .stat-value { font-size: 16px; font-weight: bold; }
                 
                 .glitch { animation: glitch-anim 3s infinite alternate; }
                 @keyframes glitch-anim {
@@ -112,10 +113,10 @@ export function generateLeetCodeSvg(stats, theme = 'dark') {
                     50% { opacity: 0.2; filter: none; }
                 }
 
-                .ring-bg { fill: none; stroke: ${colors.ringBg}; stroke-width: 6; }
+                .ring-bg { fill: none; stroke: ${colors.ringBg}; stroke-width: 5; }
                 .ring {
                     fill: none;
-                    stroke-width: 6;
+                    stroke-width: 5;
                     stroke-linecap: round;
                     stroke-dasharray: ${maxDash};
                     transform: rotate(-90deg);
@@ -123,61 +124,61 @@ export function generateLeetCodeSvg(stats, theme = 'dark') {
                 }
             </style>
 
-            <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" class="grid"/>
+            <pattern id="gridPattern" width="30" height="30" patternUnits="userSpaceOnUse">
+                <path d="M 30 0 L 0 0 0 30" fill="none" class="grid"/>
             </pattern>
         </defs>
 
         <rect width="100%" height="100%" class="bg" rx="10"/>
         <rect width="100%" height="100%" fill="url(#gridPattern)" rx="10"/>
 
-        <text x="40" y="50" class="cyan title">LEETCODE_SYSTEM::STATS</text>
-        <line x1="40" y1="65" x2="350" y2="65" stroke="${colors.cyan}" stroke-width="2" opacity="0.5"/>
-        <line x1="330" y1="65" x2="350" y2="45" stroke="${colors.cyan}" stroke-width="2" opacity="0.5"/>
+        <text x="30" y="38" class="cyan title">LEETCODE_SYSTEM::TELEMETRY</text>
+        <line x1="30" y1="50" x2="300" y2="50" stroke="${colors.cyan}" stroke-width="1.5" opacity="0.5"/>
+        <line x1="285" y1="50" x2="300" y2="35" stroke="${colors.cyan}" stroke-width="1.5" opacity="0.5"/>
         
-        <g transform="translate(700, 45)">
-            <circle cx="0" cy="-5" r="5" fill="${colors.red}" class="blink"/>
-            <text x="14" y="0" class="red" style="font-size: 16px; font-weight: bold; letter-spacing: 2px;">LIVE</text>
+        <g transform="translate(710, 35)">
+            <circle cx="0" cy="-4" r="4" fill="${colors.red}" class="blink"/>
+            <text x="12" y="0" class="red" style="font-size: 13px; font-weight: bold; letter-spacing: 2px;">LIVE</text>
         </g>
         
-        <g transform="translate(40, 160)">
+        <g transform="translate(30, 80)">
             <text x="0" y="0" class="dim label">TOTAL_SOLVED</text>
-            <text x="0" y="70" class="cyan big-number glitch">${total}</text>
+            <text x="0" y="55" class="cyan big-number glitch">${total}</text>
+            <text x="0" y="85" class="dim label">ALGORITHMS &amp; DATA STRUCTURES</text>
         </g>
 
-        <g transform="translate(480, 150)">
-            <rect x="0" y="-30" width="280" height="120" fill="${theme === 'dark' ? 'rgba(255,0,255,0.05)' : 'rgba(204,0,204,0.05)'}" stroke="${colors.magenta}" stroke-width="1" rx="5" opacity="0.3"/>
-            <text x="20" y="0" class="dim label">CONTEST_RATING</text>
-            <text x="20" y="40" class="magenta big-number pulse" style="font-size: 42px;">${rating}</text>
-            
-            <text x="20" y="70" class="dim label">GLOBAL_RANK: <tspan class="white">${rank}</tspan></text>
-            <text x="20" y="100" class="dim label">ATTENDED: <tspan class="white">${contests}</tspan></text>
+        <g transform="translate(260, 70)">
+            <rect x="0" y="-18" width="220" height="115" fill="${theme === 'dark' ? 'rgba(255,0,255,0.05)' : 'rgba(204,0,204,0.05)'}" stroke="${colors.magenta}" stroke-width="1" rx="5" opacity="0.3"/>
+            <text x="15" y="5" class="dim label">CONTEST_RATING</text>
+            <text x="15" y="42" class="magenta big-number pulse" style="font-size: 34px;">${rating}</text>
+            <text x="15" y="68" class="dim label">GLOBAL_RANK: <tspan class="white">${rank}</tspan></text>
+            <text x="15" y="88" class="dim label">ATTENDED: <tspan class="white">${contests}</tspan></text>
         </g>
 
-        <g transform="translate(0, 320)">
-            <g transform="translate(100, 40)">
+        <g transform="translate(515, 125)">
+            <g transform="translate(45, 0)">
                 <circle cx="0" cy="0" r="${radius}" class="ring-bg"/>
                 <circle cx="0" cy="0" r="${radius}" class="ring green" style="stroke-dashoffset: ${maxDash - (easyPerc * maxDash)}; filter: drop-shadow(0 0 5px ${colors.green});" />
                 <text x="0" y="5" class="white stat-value" text-anchor="middle">${easy}</text>
-                <text x="0" y="70" class="green label" text-anchor="middle">EASY</text>
+                <text x="0" y="50" class="green label" text-anchor="middle">EASY</text>
             </g>
             
-            <g transform="translate(250, 40)">
+            <g transform="translate(135, 0)">
                 <circle cx="0" cy="0" r="${radius}" class="ring-bg"/>
                 <circle cx="0" cy="0" r="${radius}" class="ring yellow" style="stroke-dashoffset: ${maxDash - (mediumPerc * maxDash)}; filter: drop-shadow(0 0 5px ${colors.yellow});" />
                 <text x="0" y="5" class="white stat-value" text-anchor="middle">${medium}</text>
-                <text x="0" y="70" class="yellow label" text-anchor="middle">MEDIUM</text>
+                <text x="0" y="50" class="yellow label" text-anchor="middle">MEDIUM</text>
             </g>
 
-            <g transform="translate(400, 40)">
+            <g transform="translate(225, 0)">
                 <circle cx="0" cy="0" r="${radius}" class="ring-bg"/>
                 <circle cx="0" cy="0" r="${radius}" class="ring red" style="stroke-dashoffset: ${maxDash - (hardPerc * maxDash)}; filter: drop-shadow(0 0 5px ${colors.red});" />
                 <text x="0" y="5" class="white stat-value" text-anchor="middle">${hard}</text>
-                <text x="0" y="70" class="red label" text-anchor="middle">HARD</text>
+                <text x="0" y="50" class="red label" text-anchor="middle">HARD</text>
             </g>
         </g>
         
-        <text x="700" y="430" class="dim" style="font-size: 10px;">v1.1</text>
+        <text x="740" y="225" class="dim" style="font-size: 10px;">v2.0_WIDE</text>
     </svg>`;
 }
 
@@ -186,13 +187,14 @@ export function generateGithubSvg(stats, theme = 'dark') {
 
     const colors = getColors(theme, 'github');
     const width = 800;
-    const height = 450;
+    const height = 240;
     
     const total = stats.totalContributions || 0;
     const currentStreak = stats.currentStreak || 0;
     const longestStreak = stats.longestStreak || 0;
     const topLang = stats.topLanguage || 'N/A';
     const bestDay = stats.mostActiveDay || 'N/A';
+    const totalCommits = stats.totalCommits || 'N/A';
 
     return `
     <svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" xmlns="http://www.w3.org/2000/svg">
@@ -213,10 +215,10 @@ export function generateGithubSvg(stats, theme = 'dark') {
                 .white { fill: ${colors.textMain}; }
                 .dim { fill: ${colors.textDim}; }
                 
-                .title { font-size: 28px; font-weight: bold; letter-spacing: 2px; }
-                .big-number { font-size: 72px; font-weight: bold; }
-                .label { font-size: 16px; letter-spacing: 1px; }
-                .stat-value { font-size: 22px; font-weight: bold; }
+                .title { font-size: 20px; font-weight: bold; letter-spacing: 2px; }
+                .big-number { font-size: 54px; font-weight: bold; }
+                .label { font-size: 13px; letter-spacing: 1px; }
+                .stat-value { font-size: 18px; font-weight: bold; }
                 
                 .glitch { animation: glitch-anim 3s infinite alternate; }
                 @keyframes glitch-anim {
@@ -239,49 +241,49 @@ export function generateGithubSvg(stats, theme = 'dark') {
                 }
             </style>
 
-            <pattern id="gridPatternGithub" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" class="grid"/>
+            <pattern id="gridPatternGithub" width="30" height="30" patternUnits="userSpaceOnUse">
+                <path d="M 30 0 L 0 0 0 30" fill="none" class="grid"/>
             </pattern>
         </defs>
 
         <rect width="100%" height="100%" class="bg" rx="10"/>
         <rect width="100%" height="100%" fill="url(#gridPatternGithub)" rx="10"/>
 
-        <text x="40" y="50" class="green title">GITHUB_SYSTEM::STATS</text>
-        <line x1="40" y1="65" x2="350" y2="65" stroke="${colors.green}" stroke-width="2" opacity="0.5"/>
-        <line x1="330" y1="65" x2="350" y2="45" stroke="${colors.green}" stroke-width="2" opacity="0.5"/>
+        <text x="30" y="38" class="green title">GITHUB_SYSTEM::TELEMETRY</text>
+        <line x1="30" y1="50" x2="300" y2="50" stroke="${colors.green}" stroke-width="1.5" opacity="0.5"/>
+        <line x1="285" y1="50" x2="300" y2="35" stroke="${colors.green}" stroke-width="1.5" opacity="0.5"/>
         
-        <g transform="translate(670, 45)">
-            <circle cx="0" cy="-5" r="5" class="blink"/>
-            <text x="14" y="0" class="live-text" style="font-size: 16px; font-weight: bold; letter-spacing: 2px;">LIVE</text>
+        <g transform="translate(710, 35)">
+            <circle cx="0" cy="-4" r="4" class="blink"/>
+            <text x="12" y="0" class="live-text" style="font-size: 13px; font-weight: bold; letter-spacing: 2px;">LIVE</text>
         </g>
         
-        <g transform="translate(40, 160)">
+        <g transform="translate(30, 80)">
             <text x="0" y="0" class="dim label">TOTAL_CONTRIBUTIONS</text>
-            <text x="0" y="70" class="green big-number glitch">${total}</text>
+            <text x="0" y="55" class="green big-number glitch">${total}</text>
+            <text x="0" y="85" class="dim label">TOTAL_COMMITS: <tspan class="white">${totalCommits}</tspan></text>
         </g>
 
-        <g transform="translate(480, 150)">
-            <rect x="0" y="-30" width="280" height="120" fill="${theme === 'dark' ? 'rgba(0,255,102,0.05)' : 'rgba(0,136,51,0.05)'}" stroke="${colors.green}" stroke-width="1" rx="5" opacity="0.3"/>
-            <text x="20" y="0" class="dim label">CURRENT_STREAK</text>
-            <text x="20" y="40" class="magenta stat-value" style="font-size: 38px;">${currentStreak} <tspan class="dim" style="font-size: 16px">DAYS</tspan></text>
+        <g transform="translate(305, 70)">
+            <rect x="0" y="-18" width="230" height="115" fill="${theme === 'dark' ? 'rgba(0,255,102,0.05)' : 'rgba(0,136,51,0.05)'}" stroke="${colors.green}" stroke-width="1" rx="5" opacity="0.3"/>
+            <text x="18" y="5" class="dim label">CURRENT_STREAK</text>
+            <text x="18" y="42" class="magenta stat-value" style="font-size: 34px;">${currentStreak} <tspan class="dim" style="font-size: 14px">DAYS</tspan></text>
             
-            <text x="20" y="75" class="dim label">LONGEST_STREAK: <tspan class="white">${longestStreak}</tspan></text>
+            <text x="18" y="72" class="dim label">LONGEST_STREAK: <tspan class="white">${longestStreak}</tspan></text>
         </g>
 
-        <g transform="translate(40, 340)">
+        <g transform="translate(565, 80)">
             <g transform="translate(0, 0)">
                 <text x="0" y="0" class="dim label">TOP_LANGUAGE</text>
-                <text x="0" y="30" class="cyan stat-value">${topLang}</text>
+                <text x="0" y="24" class="cyan stat-value">${topLang}</text>
             </g>
             
-            <g transform="translate(250, 0)">
+            <g transform="translate(0, 60)">
                 <text x="0" y="0" class="dim label">MOST_ACTIVE_DAY</text>
-                <text x="0" y="30" class="orange stat-value">${bestDay}</text>
+                <text x="0" y="24" class="orange stat-value">${bestDay}</text>
             </g>
         </g>
         
-        <text x="700" y="430" class="dim" style="font-size: 10px;">v1.1</text>
+        <text x="740" y="225" class="dim" style="font-size: 10px;">v2.0_WIDE</text>
     </svg>`;
 }
-
