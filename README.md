@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/now.svg" width="100%" alt="Now: building scalable backend APIs, architecting cloud &amp; infrastructure systems, and solving algorithms &amp; data structures" />
+  <img src="./assets/now.svg" width="100%" alt="Now: building scalable backend Systems, architecting cloud &amp; infrastructure systems, and solving algorithms &amp; data structures" />
 </p>
 
 <br />
