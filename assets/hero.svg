@@ -3,7 +3,7 @@
   <desc id="desc">Backend, Cloud &amp; Infrastructure Architect</desc>
   <style>
     .label { font: 600 13px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; letter-spacing: 2.4px; fill: #57606a; }
-    .headline { font: italic 600 39px Georgia, 'Times New Roman', serif; fill: #1f2328; }
+    .headline { font: italic 600 43px Georgia, 'Times New Roman', serif; fill: #1f2328; }
     .copy { font: 400 15px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; fill: #57606a; }
     .rule { stroke: #d0d7de; }
     @media (prefers-color-scheme: dark) {
@@ -14,7 +14,7 @@
   </style>
   <text x="2" y="26" class="label">SUMIT VERMA / BACKEND, CLOUD &amp; INFRA ARCHITECT</text>
   <line x1="2" y1="45" x2="878" y2="45" class="rule" />
-  <text x="2" y="113" class="headline">&#8220;systems should be resilient by design.&#8221;</text>
+  <text x="2" y="113" class="headline">&#8220;systems should be resilient by design&#8221;</text>
   <text x="4" y="158" class="copy">backend engineering, cloud &amp; infrastructure architecture, and high-performance systems.</text>
   <line x1="2" y1="192" x2="878" y2="192" class="rule" />
 </svg>
