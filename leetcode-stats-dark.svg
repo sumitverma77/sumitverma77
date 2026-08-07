@@ -81,8 +81,8 @@
         <g transform="translate(260, 52)">
             <rect x="0" y="0" width="230" height="105" fill="rgba(255,0,255,0.05)" stroke="#FF00FF" stroke-width="1" rx="6" opacity="0.3"/>
             <text x="15" y="22" class="dim label">CONTEST_RATING</text>
-            <text x="15" y="56" class="magenta big-number pulse" style="font-size: 30px;">1810</text>
-            <text x="15" y="78" class="dim label">GLOBAL_RANK: <tspan class="white">66594</tspan></text>
+            <text x="15" y="56" class="magenta big-number pulse" style="font-size: 30px;">1811</text>
+            <text x="15" y="78" class="dim label">GLOBAL_RANK: <tspan class="white">66283</tspan></text>
             <text x="15" y="95" class="dim label">ATTENDED: <tspan class="white">81</tspan></text>
         </g>
 
