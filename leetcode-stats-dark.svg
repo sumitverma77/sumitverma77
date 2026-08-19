@@ -74,7 +74,7 @@
         
         <g transform="translate(25, 65)">
             <text x="0" y="0" class="dim label">TOTAL_SOLVED</text>
-            <text x="0" y="46" class="cyan big-number glitch">1072</text>
+            <text x="0" y="46" class="cyan big-number glitch">1075</text>
             <text x="0" y="72" class="dim label">ALGORITHMS &amp; DATA STRUCTURES</text>
         </g>
 
@@ -89,21 +89,21 @@
         <g transform="translate(515, 95)">
             <g transform="translate(45, 0)">
                 <circle cx="0" cy="0" r="24" class="ring-bg"/>
-                <circle cx="0" cy="0" r="24" class="ring green" style="stroke-dashoffset: 96.77980950760198; filter: drop-shadow(0 0 5px #00FF66);" />
-                <text x="0" y="4" class="white stat-value" text-anchor="middle">384</text>
+                <circle cx="0" cy="0" r="24" class="ring green" style="stroke-dashoffset: 96.79027784827343; filter: drop-shadow(0 0 5px #00FF66);" />
+                <text x="0" y="4" class="white stat-value" text-anchor="middle">385</text>
                 <text x="0" y="44" class="green label" text-anchor="middle">EASY</text>
             </g>
             
             <g transform="translate(140, 0)">
                 <circle cx="0" cy="0" r="24" class="ring-bg"/>
-                <circle cx="0" cy="0" r="24" class="ring yellow" style="stroke-dashoffset: 63.160079169932104; filter: drop-shadow(0 0 5px #FFEB3B);" />
-                <text x="0" y="4" class="white stat-value" text-anchor="middle">623</text>
+                <circle cx="0" cy="0" r="24" class="ring yellow" style="stroke-dashoffset: 63.12409424887397; filter: drop-shadow(0 0 5px #FFEB3B);" />
+                <text x="0" y="4" class="white stat-value" text-anchor="middle">625</text>
                 <text x="0" y="44" class="yellow label" text-anchor="middle">MEDIUM</text>
             </g>
 
             <g transform="translate(235, 0)">
                 <circle cx="0" cy="0" r="24" class="ring-bg"/>
-                <circle cx="0" cy="0" r="24" class="ring red" style="stroke-dashoffset: 141.65300606708604; filter: drop-shadow(0 0 5px #FF3333);" />
+                <circle cx="0" cy="0" r="24" class="ring red" style="stroke-dashoffset: 141.6785226474727; filter: drop-shadow(0 0 5px #FF3333);" />
                 <text x="0" y="4" class="white stat-value" text-anchor="middle">65</text>
                 <text x="0" y="44" class="red label" text-anchor="middle">HARD</text>
             </g>
