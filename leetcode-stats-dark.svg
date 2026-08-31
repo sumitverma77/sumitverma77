@@ -96,15 +96,15 @@
             
             <g transform="translate(140, 0)">
                 <circle cx="0" cy="0" r="24" class="ring-bg"/>
-                <circle cx="0" cy="0" r="24" class="ring yellow" style="stroke-dashoffset: 62.890084631639965; filter: drop-shadow(0 0 5px #FFEB3B);" />
-                <text x="0" y="4" class="white stat-value" text-anchor="middle">629</text>
+                <circle cx="0" cy="0" r="24" class="ring yellow" style="stroke-dashoffset: 63.02984037526585; filter: drop-shadow(0 0 5px #FFEB3B);" />
+                <text x="0" y="4" class="white stat-value" text-anchor="middle">628</text>
                 <text x="0" y="44" class="yellow label" text-anchor="middle">MEDIUM</text>
             </g>
 
             <g transform="translate(235, 0)">
                 <circle cx="0" cy="0" r="24" class="ring-bg"/>
-                <circle cx="0" cy="0" r="24" class="ring red" style="stroke-dashoffset: 141.71232403662873; filter: drop-shadow(0 0 5px #FF3333);" />
-                <text x="0" y="4" class="white stat-value" text-anchor="middle">65</text>
+                <circle cx="0" cy="0" r="24" class="ring red" style="stroke-dashoffset: 141.57256829300286; filter: drop-shadow(0 0 5px #FF3333);" />
+                <text x="0" y="4" class="white stat-value" text-anchor="middle">66</text>
                 <text x="0" y="44" class="red label" text-anchor="middle">HARD</text>
             </g>
         </g>
