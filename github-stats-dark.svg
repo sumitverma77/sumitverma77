@@ -57,8 +57,8 @@
         
         <g transform="translate(25, 65)">
             <text x="0" y="0" class="dim label">TOTAL_CONTRIBUTIONS</text>
-            <text x="0" y="46" class="green big-number glitch">1371</text>
-            <text x="0" y="72" class="dim label">TOTAL_COMMITS: <tspan class="white">471</tspan></text>
+            <text x="0" y="46" class="green big-number glitch">1372</text>
+            <text x="0" y="72" class="dim label">TOTAL_COMMITS: <tspan class="white">472</tspan></text>
         </g>
 
         <g transform="translate(290, 52)">
